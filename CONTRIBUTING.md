@@ -4,3 +4,4 @@
 - [Alexander Brown](https://github.com/webtechalex)
 - [Carlos Ferreira](https://github.com/cajogos)
 - [Vu Dao](https://github.com/v24dao)
+- [Rob Chu](https://github.com/RobChooses)
