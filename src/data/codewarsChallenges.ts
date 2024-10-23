@@ -164,10 +164,6 @@ export const codeWarsChallenges: CodeWarsChallenge[] = [
     link: "https://www.codewars.com/kata/55f7eb009e6614447b000099"
   },
   {
-    title: "Thinkful - List Drills: Longest word",
-    link: "https://www.codewars.com/kata/58670300f04e7449290000e5"
-  },
-  {
     title: "max diff - easy",
     link: "https://www.codewars.com/kata/588a3c3ef0fbc9c8e1000095"
   },
@@ -198,10 +194,6 @@ export const codeWarsChallenges: CodeWarsChallenge[] = [
   {
     title: "Duck Duck Goose",
     link: "https://www.codewars.com/kata/582e0e592029ea10530009ce"
-  },
-  {
-    title: "How many animals are there?",
-    link: "https://www.codewars.com/kata/593406b8f3d071d83c00005d"
   },
   {
     title: "8kyu interpreters: HQ9+",
@@ -252,10 +244,6 @@ export const codeWarsChallenges: CodeWarsChallenge[] = [
     link: "https://www.codewars.com/kata/55a144eff5124e546400005a"
   },
   {
-    title: "Factorial Factory",
-    link: "https://www.codewars.com/kata/528e95af53dcdb40b5000171/javascript"
-  },
-  {
     title: "Closest to Zero",
     link: "https://www.codewars.com/kata/59887207635904314100007b"
   },
@@ -294,10 +282,6 @@ export const codeWarsChallenges: CodeWarsChallenge[] = [
   {
     title: "Possiblities Array",
     link: "https://www.codewars.com/kata/59b710ed70a3b7dd8f000027"
-  },
-  {
-    title: "Man in the west",
-    link: "https://www.codewars.com/kata/59bd5dc270a3b7350c00008b"
   },
   {
     title: "Matrix creation",
@@ -508,16 +492,8 @@ export const codeWarsChallenges: CodeWarsChallenge[] = [
     link: "https://www.codewars.com/kata/5d376cdc9bcee7001fcb84c0"
   },
   {
-    title: "Valid Parentheses",
-    link: "https://www.codewars.com/kata/52774a314c2333f0a7000688"
-  },
-  {
     title: "Finding length of the sequence",
     link: "https://www.codewars.com/kata/5566b0dd450172dfc4000005"
-  },
-  {
-    title: "Count letters in string",
-    link: "https://www.codewars.com/kata/5808ff71c7cfa1c6aa00006d"
   },
   {
     title: "The First Non Repeated Character In A String",
