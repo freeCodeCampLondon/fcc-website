@@ -1,8 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Discord from "../assets/images/discordblack.svg";
-import Github from "../assets/images/github.svg";
-import Meetup from "../assets/images/meetup.svg";
+
+import Discord from '../assets/images/discordblack.svg';
+import Github from '../assets/images/github.svg';
+import Meetup from '../assets/images/meetup.svg';
 import Icon from '../components/Icon.astro';
 ---
 
@@ -12,24 +13,25 @@ import Icon from '../components/Icon.astro';
 
 		<a class=" text-3xl bg-yellow-700 p-[2px]" href="https://www.freecodecamp.org/">
 			<h1 class="bg-gradient-to-b from-yellow-500 via-yellow-600 to-yellow-500 text-slate-900 p-2 transition-colors hover:from-yellow-500 hover:to-yellow-500">Get Started (it's free)</h1></a>
+    
 		<div class=" w-96 text-white h-fit m-5 p-5 flex flex-row justify-evenly">
 				<Icon
 				href='https://discord.gg/hmVycPYAue'
 				src={Discord}
 				alt="Discord"/>
-
-			
+      
 				<Icon
 				href='https://www.meetup.com/freecodecamp-london/'
 				src={Meetup}
 				alt="Discord"/>
-
+      
 				<Icon
 				href='https://github.com/freeCodeCampLondon/fcc-website'
 				src={Github}
 				alt="Discord"/>
 
 		</div>
+    
 	</div>
 </Layout>
 
@@ -37,6 +39,4 @@ import Icon from '../components/Icon.astro';
 	img {
 		fill:azure;
 	}
-
-
 </style>
