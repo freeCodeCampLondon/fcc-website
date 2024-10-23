@@ -253,7 +253,7 @@ export const codeWarsChallenges: CodeWarsChallenge[] = [
   },
   {
     title: "Implement Array.prototype.filter()",
-    link: ""
+    link: "https://www.codewars.com/kata/56dd9b84fe5754786f0014f7"
   },
   {
     title: "Sum Times Tables",
@@ -317,11 +317,11 @@ export const codeWarsChallenges: CodeWarsChallenge[] = [
   },
   {
     title: "Maximum Gap (Array Series #4)",
-    link: "Array Series #4"
+    link: "https://www.codewars.com/kata/5a7893ef0025e9eb50000013"
   },
   {
     title: "Tidy Number (Special Numbers Series #9)",
-    link: "Special Numbers Series #9"
+    link: "https://www.codewars.com/kata/5a87449ab1710171300000fd"
   },
   {
     title: "Row Weights",
@@ -341,7 +341,7 @@ export const codeWarsChallenges: CodeWarsChallenge[] = [
   },
   {
     title: "Product Array (Array Series #5)",
-    link: "Array Series #5"
+    link: "https://www.codewars.com/kata/5a905c2157c562994900009d"
   },
   {
     title: "Dominant array elements",
@@ -429,7 +429,7 @@ export const codeWarsChallenges: CodeWarsChallenge[] = [
   },
   {
     title: "Bingo ( Or Not )",
-    link: " Or Not "
+    link: "https://www.codewars.com/kata/5a1ee4dfffe75f0fcb000145"
   },
   {
     title: "Sum of numbers from 0 to N",
