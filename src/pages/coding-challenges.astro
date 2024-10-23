@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { codeWarsChallenges } from "../data/codewarsChallenges";
+---
+
+<Layout title="FreeCodeCamp London">
+    <div class=" w-full flex items-center justify-center">
+        <h1 class=" text-4xl text-white bold ">FreeCodeCamp <span class="bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 text-transparent bg-clip-text inline-block ">London</span></h1>
+    </div>
+    <h2 class=" text-4xl text-white bold ">Coding challenges</h2>
+    <p>Algorithms and data structures are an essential piece of the knowledge puzzle for software developers, but their value can be underrated and the experience can be negative as these skills are often associated only with interviews. We can counteract this bias and become better developers by practising these skills in a fun and supportive environment alongside other learners.</p>
+    <p>Hone your fundamental Javascript skills by having a go at FreeCodeCamp's <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/" target="_blank">JavaScript Algorithms and Data Structures certification.</a> You can also try the algorithms and data structures courses from the <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures" target="_blank">legacy curriculum</a> for a different kind of challenge.</p>
+    <p>For a more gamified experience and a wider selection of challenges, sign up to <a href="ttps://www.codewars.com">CodeWars</a>. We have curated some coding challenges from CodeWars for you to try here:</p>
+    <ul>
+      {codeWarsChallenges.map(challenge => (<li><a href={challenge.link} target="_blank">{challenge.title}</a></li>))}
+    </ul>
+
+</Layout>
