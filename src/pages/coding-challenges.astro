@@ -13,46 +13,44 @@ import CodeChallengeCard from "../components/CodeChallengeCard.astro";
           >London</span
         >
       </h1>
-      <div class="w-full text-left">
-        <h2 class="m-5 text-4xl text-white bold">Coding Challenges:</h2>
-
-        <p class="m-5">
-          Hone your fundamental Javascript skills by having a go at
-          freeCodeCamp's <a
-            href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/"
-            target="_blank"
-            >JavaScript Algorithms and Data Structures certification</a
-          >.
-          <br /> You can also try the algorithms and data structures courses from
-          the <a
-            href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures"
-            target="_blank">legacy curriculum</a
-          > for a different kind of challenge.
-        </p>
-        <p class="m-5">
-          For a more gamified experience and a wider selection of challenges,
-          sign up to <a href="https://www.codewars.com">CodeWars</a>. <br /> We have
-          curated some coding challenges from CodeWars for you to try here:
-        </p>
-      </div>
-
-      <div class="m-5 grid grid-cols-1 md:grid-cols-5 gap-5">
-        {
-          codeWarsChallenges.map((challenge) => (
-            <CodeChallengeCard
-              title={challenge.title}
-              href={challenge.link}
-              difficulty="Beginner"
-            />
-          ))
-        }
-      </div>
     </a>
+  </div>
+  <div class="w-full text-left">
+    <h2 class="m-5 text-4xl text-white bold">Coding Challenges:</h2>
 
-    <style>
-      a {
-        color: salmon;
-      }
-    </style>
-  </div></Layout
->
+    <p class="m-5">
+      Hone your fundamental Javascript skills by having a go at freeCodeCamp's <a
+        href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/"
+        target="_blank"
+        >JavaScript Algorithms and Data Structures certification</a
+      >.
+      <br /> You can also try the algorithms and data structures courses from the
+      <a
+        href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures"
+        target="_blank">legacy curriculum</a
+      > for a different kind of challenge.
+    </p>
+    <p class="m-5">
+      For a more gamified experience and a wider selection of challenges, sign
+      up to <a href="https://www.codewars.com">CodeWars</a>. <br /> We have curated
+      some coding challenges from CodeWars for you to try here:
+    </p>
+  </div>
+  <div class="m-5 grid grid-cols-1 md:grid-cols-5 gap-5">
+    {
+      codeWarsChallenges.map((challenge) => (
+        <CodeChallengeCard
+          title={challenge.title}
+          href={challenge.link}
+          difficulty="Beginner"
+        />
+      ))
+    }
+  </div>
+
+  <style>
+    a {
+      color: salmon;
+    }
+  </style>
+</Layout>
