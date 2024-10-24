@@ -1,23 +1,20 @@
 ---
-import type { ImageMetadata } from 'astro'
-import { Image } from 'astro:assets';
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
 
 interface Props {
-    alt : string,
-    src : ImageMetadata
-    href : string
+  alt: string;
+  src: ImageMetadata;
+  href: string;
 }
 const { href, alt, src } = Astro.props;
 ---
 
-<a class=" bg-gray-500 p-3 fill-white hover:bg-gray-400"  href={href} target="_blank" rel="noopener noreferrer">
-
-    <Image
-        class=' fill-white'
-        src={src}
-        alt={alt}
-        width={45}
-        height={45}
-    />
+<a
+  class="bg-gray-500 p-3 fill-white hover:bg-gray-400"
+  href={href}
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <Image class="fill-white" src={src} alt={alt} width={45} height={45} />
 </a>
-
