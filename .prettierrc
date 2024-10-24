@@ -2,9 +2,16 @@
   "plugins": ["prettier-plugin-astro"],
   "overrides": [
     {
+      "files": ["*.js", "*.ts", "*.jsx", "*.tsx"],
+      "options": {
+        "tabWidth": 4
+      }
+    },
+    {
       "files": "*.astro",
       "options": {
-        "parser": "astro"
+        "parser": "astro",
+        "tabWidth": 4
       }
     }
   ]
