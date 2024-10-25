@@ -1,3 +1,11 @@
+# Contributors
+
+- [Nnamdi Michael Okpala](https://www.github.com/okpalan)
+- [Alexander Brown](https://github.com/webtechalex)
+- [Carlos Ferreira](https://github.com/cajogos)
+- [Vu Dao](https://github.com/v24dao)
+- [Rob Chu](https://github.com/RobChooses)
+
 # How to Contribute
 
 To get started making a change to this project: fork this repo to your own GitHub account; clone the fork; make your changes on your clone; commit and push your changes to your fork.
@@ -14,11 +22,3 @@ We hope that members of the freeCodeCamp London community will benefit from the 
 If you are a new developer, and you haven't used version control tools such as Git and GitHub before, the experience can be confusing at first.
 A good place to start is to check out [freeCodeCamp's own article on Git and GitHub](https://www.freecodecamp.org/news/introduction-to-git-and-github/). The article explains key concepts and contains links to other resources so that you can get more information or alternative explanations as needed.
 Also feel free to drop into our discord and ask us for advice!
-
-# Maintainers
-
-- [Nnamdi Michael Okpala](https://www.github.com/okpalan)
-- [Alexander Brown](https://github.com/webtechalex)
-- [Carlos Ferreira](https://github.com/cajogos)
-- [Vu Dao](https://github.com/v24dao)
-- [Rob Chu](https://github.com/RobChooses)
