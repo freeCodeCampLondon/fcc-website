@@ -2,7 +2,9 @@
 
 Hello campers!
 
-This is the [official website](https://freecodecamp.london/) for the freeCodeCamp London group. 
+This is the [official website](https://freecodecamp.london/) for the freeCodeCamp London group.
+
+For details on how to get started contributing to this project, please see our advice and instructions [here](CONTRIBUTING.md)
 
 Our group typically meets up once per month in locations around Central London. All abilities are welcome, from absolute beginner to professional!
 
