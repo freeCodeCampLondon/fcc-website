@@ -3,8 +3,7 @@ export type CodeWarsChallenge = {
     link: string;
 };
 export const codeWarsChallenges: CodeWarsChallenge[] = [
-    {
-        title: "Returning Strings",
+    {title: "Returning Strings",
         link: "https://www.codewars.com/kata/55a70521798b14d4750000a4",
     },
     {
