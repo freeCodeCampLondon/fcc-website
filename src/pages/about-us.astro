@@ -1,23 +1,13 @@
 ---
-import FAQCard from "../components/FAQCard.astro";
-import { faqAnswer } from "../data/faq";
+import FAQ from "../components/FAQ.astro";
+import Logo from "../components/Logo.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="About Us">
-    <div class="w-full flex items-center text-left">
-        <a href="/">
-            <h1 class="m-5 text-4xl text-white bold">
-                freeCodeCamp <span
-                    class="bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 text-transparent bg-clip-text inline-block"
-                    >London</span
-                >
-            </h1>
-        </a>
-    </div>
+    <Logo/>
     <div class="w-full text-justify flex justify-center items-center flex-col">
-        <div class="w-96 md:w-1/2 m-5">
-
+        <div class="w-96 lg:w-1/2 m-5">
             <h1 class=" font-extrabold text-4xl">About us</h1>
             <p>
                 Welcome to freeCodeCamp London! We’re a community of coding enthusiasts, from beginners to seasoned developers, gathering to learn, share, and grow together.
@@ -32,36 +22,15 @@ import Layout from "../layouts/Layout.astro";
             </p>
             Here’s what you can expect:
             <ul class="mt-0 list-disc pl-4">
-    
                 <li>Group Learning: At the start, we usually split into groups based on interests. You might join a group tackling specific coding challenges, discussing job-seeking strategies, or chatting about all things tech.</li>
     
-                <li>Show and Tell: We start each meetup with a short “show and tell” where members can share projects, recent learnings, or anything coding-related. Interested? Let us know on Slack!</li>
+                <li>Show and Tell: We start each meetup with a short “show and tell” where members can share projects, recent learnings, or anything coding-related. Interested? Let us know on Discord!</li>
     
                 <li>Flexible Format: Feel free to move around between groups and connect with different people throughout the session. This is a great way to meet other learners and experienced developers alike.</li>
-    
-    
             </ul>
-
-
-            <h1 class=" text-4xl w-full mt-4">FAQs</h1>
-            <ul >
-                {
-                    faqAnswer.map((faq) => (
-                        <FAQCard
-                            title={faq.title}
-                            body={faq.body}
-                        />
-                    ))
-                }
-        
-        
-            </ul>
-        
+           <FAQ/>
     
-    </div>
-
-   
-       
+        </div>
     </div>
 
     <style>
