@@ -1,20 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { codeWarsChallenges } from "../data/codewarsChallenges";
-import CodeChallengeCard from "../components/CodeChallengeCard.astro";
+import Logo from "../components/Logo.astro";
+import CodeChallenge from "../components/CodeChallenge.astro";
 ---
 
 <Layout title="freeCodeCamp London">
-    <div class="w-full flex items-center text-left">
-        <a href="/">
-            <h1 class="m-5 text-4xl text-white bold">
-                freeCodeCamp <span
-                    class="bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 text-transparent bg-clip-text inline-block"
-                    >London</span
-                >
-            </h1>
-        </a>
-    </div>
+    <Logo/>
     <div class="w-full text-left">
         <h2 class="m-5 text-4xl text-white bold">Coding Challenges:</h2>
 
@@ -38,17 +29,7 @@ import CodeChallengeCard from "../components/CodeChallengeCard.astro";
             have curated some coding challenges from CodeWars for you to try here:
         </p>
     </div>
-    <div class="m-5 grid grid-cols-1 md:grid-cols-5 gap-5">
-        {
-            codeWarsChallenges.map((challenge) => (
-                <CodeChallengeCard
-                    title={challenge.title}
-                    href={challenge.link}
-                    difficulty="Beginner"
-                />
-            ))
-        }
-    </div>
+    <CodeChallenge/>
 
     <style>
         a {

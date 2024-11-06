@@ -1,0 +1,17 @@
+---
+import { codeWarsChallenges } from "../data/codewarsChallenges";
+import CodeChallengeCard from "./CodeChallengeCard.astro";
+
+---
+
+<div class="m-5 grid grid-cols-1 md:grid-cols-5 gap-5">
+    {
+        codeWarsChallenges.map((challenge) => (
+            <CodeChallengeCard
+                title={challenge.title}
+                href={challenge.link}
+                difficulty="Beginner"
+            />
+        ))
+    }
+</div>
