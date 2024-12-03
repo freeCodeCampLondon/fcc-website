@@ -1,56 +1,61 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from '../layouts/Layout.astro';
 
-import Discord from "../assets/images/discordblack.svg";
-import Github from "../assets/images/github.svg";
-import Meetup from "../assets/images/meetup.svg";
-import Icon from "../components/Icon.astro";
+import Discord from '../assets/images/discordblack.svg';
+import Github from '../assets/images/github.svg';
+import Meetup from '../assets/images/meetup.svg';
+import Icon from '../components/Icon.astro';
+import Navbar from '../components/Navbar.astro';
 ---
 
 <Layout title="freeCodeCamp London">
-    <div class="w-full h-screen flex flex-col items-center justify-center">
-        <h1 class="text-6xl text-white bold m-5">
-            freeCodeCamp <span
-                class="bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 text-transparent bg-clip-text inline-block"
-                >London</span
-            >
-        </h1>
+	<Navbar />
+	<div
+		class="w-full h-screen flex flex-col items-center justify-center max-sm:justify-center items-center"
+	>
+		<h1 class="text-6xl text-white bold m-5 max-sm:text-center">
+			freeCodeCamp <span
+				class="bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 text-transparent bg-clip-text inline-block"
+				>London</span
+			>
+		</h1>
 
-        <a
-            class="w-[19rem] text-center text-3xl bg-yellow-700 p-[2px] m-5"
-            href="https://www.freecodecamp.org/"
-        >
-            <h1
-                class="bg-gradient-to-b from-yellow-500 via-yellow-600 to-yellow-500 text-slate-900 p-2 transition-colors hover:from-yellow-500 hover:to-yellow-500"
-            >
-                Get Started (it's free)
-            </h1></a
-        >
+		<a
+			class="w-[19rem] text-center text-3xl bg-yellow-700 p-[2px] m-5"
+			href="https://www.freecodecamp.org/"
+		>
+			<h1
+				class="bg-gradient-to-b from-yellow-500 via-yellow-600 to-yellow-500 text-slate-900 p-2 transition-colors hover:from-yellow-500 hover:to-yellow-500"
+			>
+				Get Started (it's free)
+			</h1></a
+		>
 
-        <a
-            class="w-[19rem] text-center text-3xl bg-green-700 p-[2px]"
-            href="/coding-challenges"
-        >
-            <h1
-                class="bg-gradient-to-b from-green-500 via-green-600 to-green-500 text-slate-900 p-2 transition-colors hover:from-green-500 hover:to-green-500"
-            >
-                Test Your Skills
-            </h1></a
-        >
+		<a
+			class="w-[19rem] text-center text-3xl bg-green-700 p-[2px]"
+			href="/coding-challenges"
+		>
+			<h1
+				class="bg-gradient-to-b from-green-500 via-green-600 to-green-500 text-slate-900 p-2 transition-colors hover:from-green-500 hover:to-green-500"
+			>
+				Test Your Skills
+			</h1></a
+		>
 
-        <div class="w-96 text-white h-fit m-5 p-5 flex flex-row justify-evenly">
-            <Icon
-                href="https://discord.gg/hmVycPYAue"
-                src={Discord}
-                alt="Discord"
-            />
+		<div class="w-96 text-white h-fit m-5 p-5 flex flex-row justify-evenly">
+			<Icon
+				href="https://discord.gg/hmVycPYAue"
+				src={Discord}
+				alt="Discord"
+			/>
 
-            <Icon
-                href="https://www.meetup.com/freecodecamp-london/"
-                src={Meetup}
-                alt="Discord"
-            />
+			<Icon
+				href="https://www.meetup.com/freecodecamp-london/"
+				src={Meetup}
+				alt="Discord"
+			/>
 
+<<<<<<< HEAD
             <Icon
                 href="https://github.com/freeCodeCampLondon/fcc-website"
                 src={Github}
@@ -64,10 +69,19 @@ import Icon from "../components/Icon.astro";
             </a>
         </footer>
     </div>
+=======
+			<Icon
+				href="https://github.com/freeCodeCampLondon/fcc-website"
+				src={Github}
+				alt="Discord"
+			/>
+		</div>
+	</div>
+>>>>>>> 0dd8bc3 (Update: navbar)
 </Layout>
 
 <style>
-    img {
-        fill: azure;
-    }
+	img {
+		fill: azure;
+	}
 </style>
