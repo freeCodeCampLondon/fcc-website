@@ -17,7 +17,7 @@ export const faqAnswer : FAQ[] = [
         body: "Our meetup locations vary, so keep an eye on our Meetup group or the #meetups channel in Discord for the latest details."
     },
     {
-        title: "Cost:",
+        title: "Cost",
         body: "There’s no fee to attend, though some venues require you to register in advance. Be sure to check each event's details to ensure you’re signed up properly."
     },
     {

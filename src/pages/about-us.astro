@@ -1,17 +1,18 @@
 ---
 import FAQ from "../components/FAQ.astro";
-import Logo from "../components/Logo.astro";
+import Navbar from "../components/Navbar.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="About Us">
-    <Logo/>
+    <Navbar />
+    
     <div class="w-full text-justify flex justify-center items-center flex-col">
         <div class="w-96 lg:w-1/2 m-5">
             <h1 class=" font-extrabold text-4xl">About us</h1>
             <p>
                 Welcome to freeCodeCamp London! We’re a community of coding enthusiasts, from beginners to seasoned developers, gathering to learn, share, and grow together.
-                 We believe coding should be accessible to everyone, which is why freeCodeCamp is completely free and open to anyone with a computer, internet connection, and a desire to learn.
+                We believe coding should be accessible to everyone, which is why freeCodeCamp is completely free and open to anyone with a computer, internet connection, and a desire to learn.
             </p>
             <h2 class=" font-extrabold text-2xl">What is freeCodeCamp?</h2>
             <p>
@@ -28,7 +29,7 @@ import Layout from "../layouts/Layout.astro";
     
                 <li>Flexible Format: Feel free to move around between groups and connect with different people throughout the session. This is a great way to meet other learners and experienced developers alike.</li>
             </ul>
-           <FAQ/>
+            <FAQ/>
     
         </div>
     </div>

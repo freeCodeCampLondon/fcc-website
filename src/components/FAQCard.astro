@@ -1,49 +1,49 @@
 ---
 interface Props {
-    title: string,
-    body: string
+	title: string,
+	body: string
 }
 
 const {title, body} = Astro.props;
 ---
 
-<li onclick="{this.classList.toggle('FAQ--hidden'); this.classList.toggle('FAQ--expanded');}" class="cursor-pointer h-[80px] FAQ--hidden mt-2 border border-white rounded-lg overflow-hidden">
-    <div class="relative ">
-        <h1 class="h-[80px] flex items-center p-4 text-2xl">{title}</h1>
-        <p class=" absolute top-[80px] pl-4 pr-4">
-            {body}
-        </p>
-    </div>
+<li
+	onclick="{this.classList.toggle('FAQ--hidden'); this.classList.toggle('FAQ--expanded');}"
+	class="cursor-pointer h-[80px] FAQ--hidden mt-2 border border-white rounded-lg overflow-hidden"
+>
+	<div class="relative">
+		<h1 class="h-[80px] flex items-center p-4 text-2xl">{title}</h1>
+		<p class=" absolute top-[80px] pl-4 pr-4">
+			{body}
+		</p>
+	</div>
 
-    <style>
-        .FAQ--expanded {
-            height: 140px;
-            animation: expand 0.5s ease;
-        }
+	<style>
+		.FAQ--expanded {
+			height: 140px;
+			animation: expand 0.5s ease;
+		}
 
-        .FAQ--hidden {
-            height: 80px;
-            animation: unexpand 0.5s ease;
-        }
+		.FAQ--hidden {
+			height: 80px;
+			animation: unexpand 0.5s ease;
+		}
 
-        @keyframes expand {
-            0% {
-            height: 80px;
-            }
-            100% {
-                height: 140px;
-            }
-        }
-        @keyframes unexpand {
-            0% {
-                height: 140px;
-            }
-            100% {
-                height: 80px;
-            }
-        }
-    </style>
+		@keyframes expand {
+			0% {
+				height: 80px;
+			}
+			100% {
+				height: 140px;
+			}
+		}
+		@keyframes unexpand {
+			0% {
+				height: 140px;
+			}
+			100% {
+				height: 80px;
+			}
+		}
+	</style>
 </li>
-
-
-
