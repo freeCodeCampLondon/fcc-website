@@ -1,10 +1,10 @@
 ---
-import Logo from './Logo.astro';
+import Logo from "./Logo.astro";
 
 interface Menu {
-	label: string;
-	href: string;
-	external?: boolean;
+	label: string,
+	href: string,
+	external?: boolean,
 }
 const rightmenu: Menu[] = [
 	{
@@ -93,7 +93,6 @@ const isHomePage = Astro.url.pathname === '/';
 		</div>
 	</div>
 </nav>
-
 <script is:inline>
 	const menuButton = document.getElementById('menu');
 	menuButton.addEventListener('click', () => {
