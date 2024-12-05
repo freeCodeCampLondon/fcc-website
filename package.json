@@ -9,7 +9,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "lint": "eslint \"src/**/*.{js,ts,jsx,tsx,astro}\"",
-    "format": "prettier  \"**/*.{js,jsx,ts,tsx,md,mdx,astro}\""
+    "format": "prettier --check  \"**/*.{js,jsx,ts,tsx,md,mdx,astro}\"",
+    "format:fix": "prettier --write  \"**/*.{js,jsx,ts,tsx,md,mdx,astro}\""
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
