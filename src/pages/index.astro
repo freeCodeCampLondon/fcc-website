@@ -5,17 +5,20 @@ import Discord from "../assets/images/discordblack.svg";
 import Github from "../assets/images/github.svg";
 import Meetup from "../assets/images/meetup.svg";
 import Icon from "../components/Icon.astro";
+import Navbar from "../components/Navbar.astro";
 ---
 
 <Layout title="freeCodeCamp London">
-    <div class="w-full h-screen flex flex-col items-center justify-center">
-        <h1 class="text-6xl text-white bold m-5">
+    <Navbar />
+    <div
+        class="w-full h-screen flex flex-col items-center justify-center max-sm:justify-center items-center"
+    >
+        <h1 class="text-6xl text-white bold m-5 max-sm:text-center">
             freeCodeCamp <span
                 class="bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 text-transparent bg-clip-text inline-block"
                 >London</span
             >
         </h1>
-
         <a
             class="w-[19rem] text-center text-3xl bg-yellow-700 p-[2px] m-5"
             href="https://www.freecodecamp.org/"
@@ -26,7 +29,6 @@ import Icon from "../components/Icon.astro";
                 Get Started (it's free)
             </h1></a
         >
-
         <a
             class="w-[19rem] text-center text-3xl bg-green-700 p-[2px]"
             href="/coding-challenges"
@@ -37,31 +39,25 @@ import Icon from "../components/Icon.astro";
                 Test Your Skills
             </h1></a
         >
-
         <div class="w-96 text-white h-fit m-5 p-5 flex flex-row justify-evenly">
             <Icon
                 href="https://discord.gg/hmVycPYAue"
                 src={Discord}
                 alt="Discord"
             />
-
             <Icon
                 href="https://www.meetup.com/freecodecamp-london/"
                 src={Meetup}
                 alt="Discord"
             />
-
             <Icon
                 href="https://github.com/freeCodeCampLondon/fcc-website"
                 src={Github}
                 alt="Discord"
             />
         </div>
-
         <footer>
-            <a href="/about-us/">
-                About us
-            </a>
+            <a href="/about-us/"> About us </a>
         </footer>
     </div>
 </Layout>

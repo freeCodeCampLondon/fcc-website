@@ -1,16 +1,19 @@
 ---
 interface Props {
-    title: string,
-    body: string
+    title: string;
+    body: string;
 }
 
-const {title, body} = Astro.props;
+const { title, body } = Astro.props;
 ---
 
-<li onclick="{this.classList.toggle('FAQ--hidden'); this.classList.toggle('FAQ--expanded');}" class="cursor-pointer h-[80px] FAQ--hidden mt-2 border border-white rounded-lg overflow-hidden">
-    <div class="relative ">
+<li
+    onclick="{this.classList.toggle('FAQ--hidden'); this.classList.toggle('FAQ--expanded');}"
+    class="cursor-pointer h-[80px] FAQ--hidden mt-2 border border-white rounded-lg overflow-hidden"
+>
+    <div class="relative">
         <h1 class="h-[80px] flex items-center p-4 text-2xl">{title}</h1>
-        <p class=" absolute top-[80px] pl-4 pr-4">
+        <p class="absolute top-[80px] pl-4 pr-4">
             {body}
         </p>
     </div>
@@ -28,7 +31,7 @@ const {title, body} = Astro.props;
 
         @keyframes expand {
             0% {
-            height: 80px;
+                height: 80px;
             }
             100% {
                 height: 140px;
@@ -44,6 +47,3 @@ const {title, body} = Astro.props;
         }
     </style>
 </li>
-
-
-

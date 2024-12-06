@@ -3,14 +3,7 @@ import {faqAnswer} from "../../data/faq";
 import FAQCard from "./FAQCard.astro";
 ---
 
-<h1 class=" text-4xl w-full mt-4">FAQs</h1>
-<ul >
-    {
-        faqAnswer.map((faq) => (
-            <FAQCard
-                title={faq.title}
-                body={faq.body}
-            />
-        ))
-    }
+<h1 class="text-4xl w-full mt-4">FAQs</h1>
+<ul>
+    {faqAnswer.map((faq) => <FAQCard title={faq.title} body={faq.body} />)}
 </ul>
