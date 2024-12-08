@@ -1,6 +1,15 @@
 ---
+type Post = {
+    frontmatter: {
+        title: string,
+        description: string,
+        author: string,
+        date: string,
+    }
+    url: string,
+}
 import PostHero from "./PostHero.astro";
-const posts: any = Object.values(
+const posts: Post[] = Object.values(
     await import.meta.glob("../../pages/blog/posts/*.md", { eager: true }),
 );
 ---
@@ -9,7 +18,7 @@ const posts: any = Object.values(
     <h1 class="text-6xl">Posts</h1>
     <ul class="flex flex-col items-center">
         {
-            posts.map((post: any) => (
+            posts.map((post: Post) => (
                 <PostHero
                     title={post.frontmatter.title}
                     description={post.frontmatter.description}
