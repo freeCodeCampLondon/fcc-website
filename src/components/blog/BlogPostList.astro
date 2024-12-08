@@ -1,0 +1,21 @@
+---
+import PostHero from "./PostHero.astro"
+const posts : any = Object.values(await import.meta.glob('../../pages/blog/posts/*.md', {eager: true}));
+---
+
+<div class=" w-full h-full p-5">
+    <h1 class=" text-6xl">Posts</h1>
+    <ul class=" flex flex-col items-center">
+        {posts.map((post: any )=>
+            <PostHero
+                title={post.frontmatter.title}
+                description={post.frontmatter.description}
+                author={post.frontmatter.author}
+                date={post.frontmatter.date}
+                link={post.url}
+            />
+
+        )
+        }
+    </ul>
+</div>
