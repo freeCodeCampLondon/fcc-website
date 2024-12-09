@@ -1,13 +1,13 @@
 ---
 type Post = {
     frontmatter: {
-        title: string,
-        description: string,
-        author: string,
-        date: string,
-    }
-    url: string,
-}
+        title: string;
+        description: string;
+        author: string;
+        date: string;
+    };
+    url: string;
+};
 import PostHero from "./PostHero.astro";
 const posts: Post[] = Object.values(
     await import.meta.glob("../../pages/blog/posts/*.md", { eager: true }),
