@@ -8,6 +8,8 @@ For details on how to get started contributing to this project, please see our a
 
 Our group typically meets up once per month in locations around Central London. All abilities are welcome, from absolute beginner to professional!
 
+For an overview of to dos, please see Github [here](https://github.com/orgs/freeCodeCampLondon/projects/1)
+
 **Everyone** is encouraged to contribute - whether you are new to coding or an experienced developer. Just bring a laptop and some enthusiasm!
 
 <hr>
