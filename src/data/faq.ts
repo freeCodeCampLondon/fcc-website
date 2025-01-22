@@ -14,7 +14,7 @@ export const faqAnswer: FAQ[] = [
     },
     {
         title: "When and Where? ",
-        body: "Our meetup locations vary, so keep an eye on our Meetup group or the #meetups channel in Discord for the latest details.",
+        body: "We usually meetup every month at Wimbletech in Wimbledon. However, our meetup locations may vary, so keep an eye on our Meetup group or the #meetups channel in Discord for the latest details.",
     },
     {
         title: "Cost",
