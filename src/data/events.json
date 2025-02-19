@@ -2,23 +2,23 @@
   {
     "id": 1,
     "title": "freeCodeCamp Meetup",
+    "date": "Tuesday 18-February-2025",
+    "time": "6pm-9pm GMT",
+    "location": "Wimbletech, London",
+    "description": "Join us to solve codewars puzzles together!"
+  },
+  {
+    "id": 2,
+    "title": "freeCodeCamp Meetup",
     "date": "Tuesday 18-March-2025",
     "time": "6pm-9pm GMT",
     "location": "Wimbletech, London",
     "description": "Contribute to the FCC London page on Astro!"
   },
   {
-    "id": 2,
-    "title": "freeCodeCamp Meetup",
-    "date": "Tuesday 22-April-2025",
-    "time": "6pm-9pm GMT",
-    "location": "Wimbletech, London",
-    "description": "Join us to solve codewars puzzles together!!"
-  },
-  {
     "id": 3,
     "title": "freeCodeCamp Meetup",
-    "date": "Tuesday 20-May-2025",
+    "date": "Tuesday 22-April-2025",
     "time": "6pm-9pm GMT",
     "location": "Wimbletech, London",
     "description": "Bring a laptop and your enthusiasm!"
