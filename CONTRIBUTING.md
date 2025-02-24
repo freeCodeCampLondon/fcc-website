@@ -7,6 +7,7 @@
 - [Rob Chu](https://github.com/RobChooses)
 - [Dempsey Palacio Tascon](https://github.com/deej-tsn)
 - [Benny Yeung](https://github.com/bennyyeung)
+- [Helen Sou](https://github.com/HSSH686)
 
 # How to Contribute
 
