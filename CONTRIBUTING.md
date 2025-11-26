@@ -8,6 +8,7 @@
 - [Dempsey Palacio Tascon](https://github.com/deej-tsn)
 - [Benny Yeung](https://github.com/bennyyeung)
 - [Helen Sou](https://github.com/HSSH686)
+- [Kachi Kanu](https://github.com/0xKanu)
 
 # How to Contribute
 
