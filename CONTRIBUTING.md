@@ -9,6 +9,7 @@
 - [Benny Yeung](https://github.com/bennyyeung)
 - [Helen Sou](https://github.com/HSSH686)
 - [Bibek Gautam](https://github.com/BG-bibek)
+- [Kachi Kanu](https://github.com/0xKanu)
 
 # How to Contribute
 
