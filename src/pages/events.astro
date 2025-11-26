@@ -1,45 +1,64 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
-import events from "../data/events.json"
-
+import events from "../data/events.json";
 ---
 
 <Layout title="Blog">
     <Navbar />
     <Layout title="Next Event">
-
-    <div class="w-full text-justify flex justify-center items-center flex-col">
-        <div class="w-96 lg:w-1/2 m-5">
-            <h1 class="font-extrabold text-4xl">Next Event</h1>
-            <p>
-                Get ready for our next freeCodeCamp London meetup: Whether you are a newbie just starting your coding journey or a pro looking to flex your skills, this event is for you:
-            </p>
-            <p>
-                ✨ Interactive Coding Challenges: Tackle codewars, real-world problems in small groups. Think hackathon vibes but with a chill, supportive atmosphere.
-            </p>
-            <p>
-                ✨ Project Showcase: Share what you have been working on! Got a side project, portfolio piece, or even a work-in-progress? Bring it along and get feedback from the community.
-            </p>
-            <ul>
-                {events.map(event => (
-                    <li>
-                        <br/>
-                        <h2>{event.title}</h2>
-                        <p><b>Date:</b> {event.date}</p>
-                        <p><b>Time:</b> {event.time}</p>
-                        <p><b>Location:</b> {event.location}</p>
-                        <p><b>Description:</b> {event.description}</p>
-                        <br/>
-                    </li>))}
-            </ul>
+        <div
+            class="w-full text-justify flex justify-center items-center flex-col"
+        >
+            <div class="w-96 lg:w-1/2 m-5">
+                <h1 class="font-extrabold text-4xl">Next Event</h1>
+                <p>
+                    Get ready for our next freeCodeCamp London meetup: Whether
+                    you are a newbie just starting your coding journey or a pro
+                    looking to flex your skills, this event is for you:
+                </p>
+                <p>
+                    ✨ Interactive Coding Challenges: Tackle codewars,
+                    real-world problems in small groups. Think hackathon vibes
+                    but with a chill, supportive atmosphere.
+                </p>
+                <p>
+                    ✨ Project Showcase: Share what you have been working on!
+                    Got a side project, portfolio piece, or even a
+                    work-in-progress? Bring it along and get feedback from the
+                    community.
+                </p>
+                <ul>
+                    {
+                        events.map((event) => (
+                            <li>
+                                <br />
+                                <h2>{event.title}</h2>
+                                <p>
+                                    <b>Date:</b> {event.date}
+                                </p>
+                                <p>
+                                    <b>Time:</b> {event.time}
+                                </p>
+                                <p>
+                                    <b>Location:</b> {event.location}
+                                </p>
+                                <p>
+                                    <b>Description:</b> {event.description}
+                                </p>
+                                <br />
+                            </li>
+                        ))
+                    }
+                </ul>
+            </div>
         </div>
-    </div>
 
-    <style>
-        p {
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-        }
-    </style>
-</Layout>
+        <style>
+            p {
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+            }
+        </style>
+    </Layout></Layout
+>
