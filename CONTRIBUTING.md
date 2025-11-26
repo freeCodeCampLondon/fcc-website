@@ -8,6 +8,7 @@
 - [Dempsey Palacio Tascon](https://github.com/deej-tsn)
 - [Benny Yeung](https://github.com/bennyyeung)
 - [Helen Sou](https://github.com/HSSH686)
+- [Ramiza Rahman](https://github.com/ram-r-123)
 - [Anthea Lee](https://github/com/ankt11)
 - [Sujan Rai](https://github.com/raeesuzann)
 - [Dennis Rumanek](https://github.com/FrontEndHighRoller)
