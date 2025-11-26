@@ -8,6 +8,7 @@
 - [Dempsey Palacio Tascon](https://github.com/deej-tsn)
 - [Benny Yeung](https://github.com/bennyyeung)
 - [Helen Sou](https://github.com/HSSH686)
+- [Ramiza Rahman](https://github.com/ram-r-123)
 
 # How to Contribute
 
