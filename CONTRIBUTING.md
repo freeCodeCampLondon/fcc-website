@@ -10,6 +10,7 @@
 - [Helen Sou](https://github.com/HSSH686)
 - [Sujan Rai](https://github.com/raeesuzann)
 - [Dennis Rumanek](https://github.com/FrontEndHighRoller)
+- [Kachi Kanu](https://github.com/0xKanu)
 
 # How to Contribute
 
