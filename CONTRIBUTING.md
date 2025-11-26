@@ -8,6 +8,7 @@
 - [Dempsey Palacio Tascon](https://github.com/deej-tsn)
 - [Benny Yeung](https://github.com/bennyyeung)
 - [Helen Sou](https://github.com/HSSH686)
+- [Bibek Gautam](https://github.com/BG-bibek)
 - [Kachi Kanu](https://github.com/0xKanu)
 
 # How to Contribute
@@ -24,5 +25,5 @@ We hope that members of the freeCodeCamp London community will benefit from the 
 ### I'm new to all this. How do I get started?
 
 If you are a new developer, and you haven't used version control tools such as Git and GitHub before, the experience can be confusing at first.
-A good place to start is to check out [freeCodeCamp's own article on Git and GitHub](https://www.freecodecamp.org/news/introduction-to-git-and-github/). The article explains key concepts and contains links to other resources so that you can get more information or alternative explanations as needed.
+A good place to start is to check out [freeCodeCamp&#39;s own article on Git and GitHub](https://www.freecodecamp.org/news/introduction-to-git-and-github/). The article explains key concepts and contains links to other resources so that you can get more information or alternative explanations as needed.
 Also feel free to drop into our discord and ask us for advice!
