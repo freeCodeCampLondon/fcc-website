@@ -1,0 +1,713 @@
+Coding challenges | freeCodeCamp London
+Skip to content freeCodeCamp London About Us
+Coding Challenges
+Blog
+Events
+Light theme
+About Us
+Coding Challenges
+Blog
+Events
+Coding challenges
+Practise JavaScript with short puzzles from CodeWars, picked for our meetups. Pair up with someone, start with the 8 kyu challenges and talk through your solution as you go: explaining your thinking is half the practice.
+CodeWars ranks challenges in kyu: 8 kyu is the easiest, and the number goes down as the challenges get harder. Create a free account on CodeWars to run your code against the tests and keep track of what you have solved.
+Prefer a guided course? freeCodeCamp's JavaScript curriculum (opens in a new tab) and Full Stack Developer curriculum (opens in a new tab) teach the same skills step by step, with projects to build along the way.
+Search by title
+Rank 8 kyu 7 kyu 6 kyu 5 kyu
+Topic Arrays Strings Algorithms Maths
+Clear filters 135 challenges shown
+8 kyu: start here (23)
+8kyu interpreters: HQ9+
+8 kyu
+Fundamentals
+Solve on CodeWars: 8kyu interpreters: HQ9+ (opens in a new tab)
+A Needle in the Haystack
+8 kyu
+Arrays
+Fundamentals
+Solve on CodeWars: A Needle in the Haystack (opens in a new tab)
+altERnaTIng cAsE <=> ALTerNAtiNG CaSe
+8 kyu
+Fundamentals
+Solve on CodeWars: altERnaTIng cAsE <=> ALTerNAtiNG CaSe (opens in a new tab)
+Array plus array
+8 kyu
+Fundamentals
+Arrays
+Debugging
+Solve on CodeWars: Array plus array (opens in a new tab)
+Be Concise III - Sum Squares
+8 kyu
+Fundamentals
+Solve on CodeWars: Be Concise III - Sum Squares (opens in a new tab)
+Classy Classes
+8 kyu
+Fundamentals
+Object-oriented Programming
+Solve on CodeWars: Classy Classes (opens in a new tab)
+Contamination #1 -String-
+8 kyu
+Strings
+Fundamentals
+Solve on CodeWars: Contamination #1 -String- (opens in a new tab)
+Count by X
+8 kyu
+Arrays
+Fundamentals
+Solve on CodeWars: Count by X (opens in a new tab)
+Duck Duck Goose
+8 kyu
+Arrays
+Lists
+Fundamentals
+Solve on CodeWars: Duck Duck Goose (opens in a new tab)
+Enumerable Magic #1 - True for All?
+8 kyu
+Arrays
+Fundamentals
+Solve on CodeWars: Enumerable Magic #1 - True for All? (opens in a new tab)
+Find numbers which are divisible by given number
+8 kyu
+Arrays
+Algorithms
+Solve on CodeWars: Find numbers which are divisible by given number (opens in a new tab)
+Generate range of integers
+8 kyu
+Algorithms
+Solve on CodeWars: Generate range of integers (opens in a new tab)
+Get the mean of an array
+8 kyu
+Arrays
+Algorithms
+Solve on CodeWars: Get the mean of an array (opens in a new tab)
+Gravity Flip
+8 kyu
+Puzzles
+Arrays
+Solve on CodeWars: Gravity Flip (opens in a new tab)
+If you can't sleep, just count sheep!!
+8 kyu
+Fundamentals
+Strings
+Solve on CodeWars: If you can't sleep, just count sheep!! (opens in a new tab)
+Implement Array.prototype.filter()
+8 kyu
+Arrays
+Fundamentals
+Solve on CodeWars: Implement Array.prototype.filter() (opens in a new tab)
+Is it a palindrome?
+8 kyu
+Fundamentals
+Solve on CodeWars: Is it a palindrome? (opens in a new tab)
+Opposites Attract
+8 kyu
+Fundamentals
+Solve on CodeWars: Opposites Attract (opens in a new tab)
+Remove String Spaces
+8 kyu
+Fundamentals
+Strings
+Solve on CodeWars: Remove String Spaces (opens in a new tab)
+Returning Strings
+8 kyu
+Strings
+Fundamentals
+Solve on CodeWars: Returning Strings (opens in a new tab)
+Reversing Words in a String
+8 kyu
+Fundamentals
+Strings
+Solve on CodeWars: Reversing Words in a String (opens in a new tab)
+Rock Paper Scissors!
+8 kyu
+Fundamentals
+Solve on CodeWars: Rock Paper Scissors! (opens in a new tab)
+Stringy Strings
+8 kyu
+Strings
+Binary
+Algorithms
+Solve on CodeWars: Stringy Strings (opens in a new tab)
+7 kyu: next steps (102)
+Adding words - Part I
+7 kyu
+Mathematics
+Fundamentals
+Solve on CodeWars: Adding words - Part I (opens in a new tab)
+All unique
+7 kyu
+Algorithms
+Strings
+Solve on CodeWars: All unique (opens in a new tab)
+Alphabet symmetry
+7 kyu
+Strings
+Fundamentals
+Solve on CodeWars: Alphabet symmetry (opens in a new tab)
+Are the numbers in order?
+7 kyu
+Fundamentals
+Mathematics
+Algorithms
+Solve on CodeWars: Are the numbers in order? (opens in a new tab)
+Band name generator
+7 kyu
+Fundamentals
+Solve on CodeWars: Band name generator (opens in a new tab)
+Basic method
+7 kyu
+Arrays
+Fundamentals
+Solve on CodeWars: Basic method (opens in a new tab)
+Between Extremes
+7 kyu
+Algorithms
+Fundamentals
+Arrays
+Solve on CodeWars: Between Extremes (opens in a new tab)
+Bingo ( Or Not )
+7 kyu
+Games
+Arrays
+Fundamentals
+Solve on CodeWars: Bingo ( Or Not ) (opens in a new tab)
+Bubblesort Once
+7 kyu
+Algorithms
+Tutorials
+Sorting
+Solve on CodeWars: Bubblesort Once (opens in a new tab)
+By 3, or not by 3? That is the question . . .
+7 kyu
+Arrays
+Strings
+Fundamentals
+Solve on CodeWars: By 3, or not by 3? That is the question . . . (opens in a new tab)
+Categorize New Member
+7 kyu
+Fundamentals
+Solve on CodeWars: Categorize New Member (opens in a new tab)
+Closest to Zero
+7 kyu
+Lists
+Fundamentals
+Solve on CodeWars: Closest to Zero (opens in a new tab)
+Coding Meetup #1 - Higher-Order Functions Series - Count the number of JavaScript developers coming from Europe
+7 kyu
+Data Structures
+Fundamentals
+Algorithms
+Solve on CodeWars: Coding Meetup #1 - Higher-Order Functions Series - Count the number of JavaScript developers coming from Europe (opens in a new tab)
+Coloured Triangles
+7 kyu
+Logic
+Strings
+Algorithms
+Solve on CodeWars: Coloured Triangles (opens in a new tab)
+Complementary DNA
+7 kyu
+Strings
+Fundamentals
+Solve on CodeWars: Complementary DNA (opens in a new tab)
+Computer problem series #1: Fill the Hard Disk Drive
+7 kyu
+Lists
+Arrays
+Fundamentals
+Solve on CodeWars: Computer problem series #1: Fill the Hard Disk Drive (opens in a new tab)
+Convert Color image to greyscale
+7 kyu
+Image Processing
+Algorithms
+Solve on CodeWars: Convert Color image to greyscale (opens in a new tab)
+Counting Valleys
+7 kyu
+Algorithms
+Strings
+Solve on CodeWars: Counting Valleys (opens in a new tab)
+Credit Card Mask
+7 kyu
+Strings
+Algorithms
+Solve on CodeWars: Credit Card Mask (opens in a new tab)
+Currying functions: multiply all elements in an array
+7 kyu
+Functional Programming
+Fundamentals
+Solve on CodeWars: Currying functions: multiply all elements in an array (opens in a new tab)
+Decoding a message
+7 kyu
+Puzzles
+Algorithms
+Cryptography
+Solve on CodeWars: Decoding a message (opens in a new tab)
+Digital cypher
+7 kyu
+Fundamentals
+Ciphers
+Cryptography
+Solve on CodeWars: Digital cypher (opens in a new tab)
+DNA GC-content
+7 kyu
+Strings
+Algorithms
+Solve on CodeWars: DNA GC-content (opens in a new tab)
+Dominant array elements
+7 kyu
+Arrays
+Fundamentals
+Solve on CodeWars: Dominant array elements (opens in a new tab)
+Double Trouble
+7 kyu
+Fundamentals
+Arrays
+Solve on CodeWars: Double Trouble (opens in a new tab)
+Drone Fly-By
+7 kyu
+Fundamentals
+Strings
+Arrays
+Solve on CodeWars: Drone Fly-By (opens in a new tab)
+Duck Shoot - Easy Version
+7 kyu
+Strings
+Arrays
+Solve on CodeWars: Duck Shoot - Easy Version (opens in a new tab)
+Eliminate the intruders! Bit manipulation
+7 kyu
+Bits
+Strings
+Fundamentals
+Solve on CodeWars: Eliminate the intruders! Bit manipulation (opens in a new tab)
+esreveR
+7 kyu
+Functional Programming
+Fundamentals
+Solve on CodeWars: esreveR (opens in a new tab)
+Even numbers in an array
+7 kyu
+Fundamentals
+Arrays
+Solve on CodeWars: Even numbers in an array (opens in a new tab)
+Even odd disparity
+7 kyu
+Fundamentals
+Solve on CodeWars: Even odd disparity (opens in a new tab)
+Every possible sum of two digits
+7 kyu
+Algorithms
+Solve on CodeWars: Every possible sum of two digits (opens in a new tab)
+Figure Out the Notes
+7 kyu
+Algorithms
+Solve on CodeWars: Figure Out the Notes (opens in a new tab)
+Filter Coffee
+7 kyu
+Arrays
+Fundamentals
+Solve on CodeWars: Filter Coffee (opens in a new tab)
+Find Count of Most Frequent Item in an Array
+7 kyu
+Data Structures
+Fundamentals
+Solve on CodeWars: Find Count of Most Frequent Item in an Array (opens in a new tab)
+Find heavy ball - level: novice
+7 kyu
+Puzzles
+Logic
+Riddles
+Solve on CodeWars: Find heavy ball - level: novice (opens in a new tab)
+Find the Missing Number
+7 kyu
+Algorithms
+Solve on CodeWars: Find the Missing Number (opens in a new tab)
+Finding length of the sequence
+7 kyu
+Arrays
+Algorithms
+Solve on CodeWars: Finding length of the sequence (opens in a new tab)
+Fizz Buzz
+7 kyu
+Algorithms
+Fundamentals
+Arrays
+Solve on CodeWars: Fizz Buzz (opens in a new tab)
+Friday the 13th Part 1
+7 kyu
+Fundamentals
+Arrays
+Solve on CodeWars: Friday the 13th Part 1 (opens in a new tab)
+Friend or Foe?
+7 kyu
+Fundamentals
+Solve on CodeWars: Friend or Foe? (opens in a new tab)
+Grains
+7 kyu
+Algorithms
+Solve on CodeWars: Grains (opens in a new tab)
+Hells Kitchen
+7 kyu
+Fundamentals
+Strings
+Arrays
+Solve on CodeWars: Hells Kitchen (opens in a new tab)
+Help the Fruit Guy
+7 kyu
+Arrays
+Strings
+Fundamentals
+Solve on CodeWars: Help the Fruit Guy (opens in a new tab)
+How many are smaller than me?
+7 kyu
+Arrays
+Algorithms
+Solve on CodeWars: How many are smaller than me? (opens in a new tab)
+How many arguments
+7 kyu
+Fundamentals
+Solve on CodeWars: How many arguments (opens in a new tab)
+I guess this is a 7kyu kata #6: Fruit Ninja I
+7 kyu
+Puzzles
+Solve on CodeWars: I guess this is a 7kyu kata #6: Fruit Ninja I (opens in a new tab)
+Is every value in the array an array?
+7 kyu
+Arrays
+Fundamentals
+Solve on CodeWars: Is every value in the array an array? (opens in a new tab)
+isEven? - Bitwise Series
+7 kyu
+Restricted
+Fundamentals
+Solve on CodeWars: isEven? - Bitwise Series (opens in a new tab)
+Make a square box!
+7 kyu
+Strings
+Arrays
+ASCII Art
+Solve on CodeWars: Make a square box! (opens in a new tab)
+Make acronym
+7 kyu
+Fundamentals
+Solve on CodeWars: Make acronym (opens in a new tab)
+Matrix creation
+7 kyu
+Fundamentals
+Arrays
+Matrix
+Solve on CodeWars: Matrix creation (opens in a new tab)
+max diff - easy
+7 kyu
+Mathematics
+Lists
+Arrays
+Solve on CodeWars: max diff - easy (opens in a new tab)
+Maximum Gap (Array Series #4)
+7 kyu
+Fundamentals
+Arrays
+Solve on CodeWars: Maximum Gap (Array Series #4) (opens in a new tab)
+Merge two arrays
+7 kyu
+Fundamentals
+Arrays
+Solve on CodeWars: Merge two arrays (opens in a new tab)
+Middle Me
+7 kyu
+Fundamentals
+Strings
+Solve on CodeWars: Middle Me (opens in a new tab)
+Mirror, mirror, on the wall...
+7 kyu
+Algorithms
+Fundamentals
+Arrays
+Solve on CodeWars: Mirror, mirror, on the wall... (opens in a new tab)
+Most digits
+7 kyu
+Strings
+Fundamentals
+Solve on CodeWars: Most digits (opens in a new tab)
+Most valuable character
+7 kyu
+Fundamentals
+Solve on CodeWars: Most valuable character (opens in a new tab)
+My Language Skills
+7 kyu
+Sorting
+Arrays
+Algorithms
+Solve on CodeWars: My Language Skills (opens in a new tab)
+Naughty or Nice?
+7 kyu
+Mathematics
+Fundamentals
+Solve on CodeWars: Naughty or Nice? (opens in a new tab)
+Number of People in the Bus
+7 kyu
+Fundamentals
+Solve on CodeWars: Number of People in the Bus (opens in a new tab)
+Odd Ones Out!
+7 kyu
+Fundamentals
+Arrays
+Algorithms
+Solve on CodeWars: Odd Ones Out! (opens in a new tab)
+Odd or Even?
+7 kyu
+Fundamentals
+Arrays
+Solve on CodeWars: Odd or Even? (opens in a new tab)
+Odds-Index
+7 kyu
+Algorithms
+Solve on CodeWars: Odds-Index (opens in a new tab)
+Offload your work!
+7 kyu
+Fundamentals
+Solve on CodeWars: Offload your work! (opens in a new tab)
+Only one
+7 kyu
+Algorithms
+Solve on CodeWars: Only one (opens in a new tab)
+Possibilities Array
+7 kyu
+Arrays
+Fundamentals
+Solve on CodeWars: Possibilities Array (opens in a new tab)
+Product Array (Array Series #5)
+7 kyu
+Fundamentals
+Arrays
+Solve on CodeWars: Product Array (Array Series #5) (opens in a new tab)
+Quicksum
+7 kyu
+Fundamentals
+Solve on CodeWars: Quicksum (opens in a new tab)
+Rap-Name Generator
+7 kyu
+Fundamentals
+Mathematics
+Strings
+Solve on CodeWars: Rap-Name Generator (opens in a new tab)
+Recursive Ninja
+7 kyu
+Fundamentals
+Solve on CodeWars: Recursive Ninja (opens in a new tab)
+Recursive Replication
+7 kyu
+Recursion
+Algorithms
+Solve on CodeWars: Recursive Replication (opens in a new tab)
+Remove All The Marked Elements of a List
+7 kyu
+Fundamentals
+Algorithms
+Data Structures
+Solve on CodeWars: Remove All The Marked Elements of a List (opens in a new tab)
+Remove B M W
+7 kyu
+Fundamentals
+Strings
+Regular Expressions
+Solve on CodeWars: Remove B M W (opens in a new tab)
+Reverse Factorials
+7 kyu
+Fundamentals
+Solve on CodeWars: Reverse Factorials (opens in a new tab)
+Row Weights
+7 kyu
+Fundamentals
+Arrays
+Solve on CodeWars: Row Weights (opens in a new tab)
+Search for letters
+7 kyu
+Strings
+Fundamentals
+Solve on CodeWars: Search for letters (opens in a new tab)
+Sexy Primes <3
+7 kyu
+Fundamentals
+Solve on CodeWars: Sexy Primes <3 (opens in a new tab)
+Spacify
+7 kyu
+Fundamentals
+Strings
+Arrays
+Solve on CodeWars: Spacify (opens in a new tab)
+Split an array
+7 kyu
+Fundamentals
+Solve on CodeWars: Split an array (opens in a new tab)
+Spoonerize Me
+7 kyu
+Strings
+Algorithms
+Solve on CodeWars: Spoonerize Me (opens in a new tab)
+Squares sequence
+7 kyu
+Mathematics
+Fundamentals
+Solve on CodeWars: Squares sequence (opens in a new tab)
+Streaky Patterns in Coin Flips
+7 kyu
+Strings
+Algorithms
+Fundamentals
+Solve on CodeWars: Streaky Patterns in Coin Flips (opens in a new tab)
+String Scramble
+7 kyu
+Fundamentals
+Strings
+Arrays
+Solve on CodeWars: String Scramble (opens in a new tab)
+Sub-array elements sum
+7 kyu
+Arrays
+Lists
+Algorithms
+Solve on CodeWars: Sub-array elements sum (opens in a new tab)
+Sum of a sequence
+7 kyu
+Fundamentals
+Algorithms
+Mathematics
+Solve on CodeWars: Sum of a sequence (opens in a new tab)
+Sum of Array Averages
+7 kyu
+Arrays
+Mathematics
+Algorithms
+Solve on CodeWars: Sum of Array Averages (opens in a new tab)
+Sum of Minimums!
+7 kyu
+Fundamentals
+Arrays
+Solve on CodeWars: Sum of Minimums! (opens in a new tab)
+Sum of numbers from 0 to N
+7 kyu
+Fundamentals
+Solve on CodeWars: Sum of numbers from 0 to N (opens in a new tab)
+Sum Times Tables
+7 kyu
+Fundamentals
+Solve on CodeWars: Sum Times Tables (opens in a new tab)
+Summing a number's digits
+7 kyu
+Fundamentals
+Solve on CodeWars: Summing a number's digits (opens in a new tab)
+Test Your Knowledge Of Function Scope
+7 kyu
+Fundamentals
+Solve on CodeWars: Test Your Knowledge Of Function Scope (opens in a new tab)
+The Deca Tree
+7 kyu
+Fundamentals
+Solve on CodeWars: The Deca Tree (opens in a new tab)
+The dropWhile Function
+7 kyu
+Functional Programming
+Arrays
+Algorithms
+Solve on CodeWars: The dropWhile Function (opens in a new tab)
+The First Non Repeated Character In A String
+7 kyu
+Algorithms
+Strings
+Fundamentals
+Solve on CodeWars: The First Non Repeated Character In A String (opens in a new tab)
+The Office II - Boredom Score
+7 kyu
+Arrays
+Fundamentals
+Solve on CodeWars: The Office II - Boredom Score (opens in a new tab)
+The Office IV - Find a Meeting Room
+7 kyu
+Fundamentals
+Arrays
+Solve on CodeWars: The Office IV - Find a Meeting Room (opens in a new tab)
+Tidy Number (Special Numbers Series #9)
+7 kyu
+Fundamentals
+Arrays
+Strings
+Solve on CodeWars: Tidy Number (Special Numbers Series #9) (opens in a new tab)
+Who's Online?
+7 kyu
+Arrays
+Fundamentals
+Solve on CodeWars: Who's Online? (opens in a new tab)
+Word values
+7 kyu
+Fundamentals
+Solve on CodeWars: Word values (opens in a new tab)
+Xmas Tree
+7 kyu
+Algorithms
+Solve on CodeWars: Xmas Tree (opens in a new tab)
+6 kyu: a step up (9)
+Count the divisible numbers
+6 kyu
+Fundamentals
+Algorithms
+Solve on CodeWars: Count the divisible numbers (opens in a new tab)
+Custom Christmas Tree
+6 kyu
+Strings
+ASCII Art
+Puzzles
+Solve on CodeWars: Custom Christmas Tree (opens in a new tab)
+Duplicate Encoder
+6 kyu
+Strings
+Arrays
+Fundamentals
+Solve on CodeWars: Duplicate Encoder (opens in a new tab)
+Elimination Tournament
+6 kyu
+Arrays
+Fundamentals
+Algorithms
+Solve on CodeWars: Elimination Tournament (opens in a new tab)
+English beggars
+6 kyu
+Queues
+Arrays
+Lists
+Solve on CodeWars: English beggars (opens in a new tab)
+Equal Sides Of An Array
+6 kyu
+Algorithms
+Arrays
+Fundamentals
+Solve on CodeWars: Equal Sides Of An Array (opens in a new tab)
+Highest Rank Number in an Array
+6 kyu
+Arrays
+Fundamentals
+Solve on CodeWars: Highest Rank Number in an Array (opens in a new tab)
+Prefill an Array
+6 kyu
+Arrays
+Fundamentals
+Solve on CodeWars: Prefill an Array (opens in a new tab)
+String transformer
+6 kyu
+Fundamentals
+Solve on CodeWars: String transformer (opens in a new tab)
+5 kyu: stretch goal (1)
+Rot13
+5 kyu
+Ciphers
+Fundamentals
+Solve on CodeWars: Rot13 (opens in a new tab)
+Discord (opens in a new tab)
+Luma (opens in a new tab)
+Meetup (opens in a new tab)
+GitHub (opens in a new tab)
+About Us
+Contribute to this website (opens in a new tab)
+Code of conduct (opens in a new tab)
+Privacy
+© 2026 freeCodeCamp London. A community group in the freeCodeCamp family.
+Proudly sponsored by CAJOGOS (opens in a new tab) 🚀

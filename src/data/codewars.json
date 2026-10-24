@@ -1,0 +1,962 @@
+[
+  {
+    "id": "591588d49f4056e13f000001",
+    "title": "8kyu interpreters: HQ9+",
+    "rank": 8,
+    "tags": ["Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "56676e8fabd2d1ff3000000c",
+    "title": "A Needle in the Haystack",
+    "rank": 8,
+    "tags": ["Arrays", "Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "56efc695740d30f963000557",
+    "title": "altERnaTIng cAsE <=> ALTerNAtiNG CaSe",
+    "rank": 8,
+    "tags": ["Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "5a2be17aee1aaefe2a000151",
+    "title": "Array plus array",
+    "rank": 8,
+    "tags": ["Fundamentals", "Arrays", "Debugging"],
+    "approved": true
+  },
+  {
+    "id": "56f8fe6a2e6c0dc83b0008a7",
+    "title": "Be Concise III - Sum Squares",
+    "rank": 8,
+    "tags": ["Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "55a144eff5124e546400005a",
+    "title": "Classy Classes",
+    "rank": 8,
+    "tags": ["Fundamentals", "Object-oriented Programming"],
+    "approved": true
+  },
+  {
+    "id": "596fba44963025c878000039",
+    "title": "Contamination #1 -String-",
+    "rank": 8,
+    "tags": ["Strings", "Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "5513795bd3fafb56c200049e",
+    "title": "Count by X",
+    "rank": 8,
+    "tags": ["Arrays", "Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "582e0e592029ea10530009ce",
+    "title": "Duck Duck Goose",
+    "rank": 8,
+    "tags": ["Arrays", "Lists", "Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "54598d1fcbae2ae05200112c",
+    "title": "Enumerable Magic #1 - True for All?",
+    "rank": 8,
+    "tags": ["Arrays", "Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "55edaba99da3a9c84000003b",
+    "title": "Find numbers which are divisible by given number",
+    "rank": 8,
+    "tags": ["Arrays", "Algorithms"],
+    "approved": true
+  },
+  {
+    "id": "55eca815d0d20962e1000106",
+    "title": "Generate range of integers",
+    "rank": 8,
+    "tags": ["Algorithms"],
+    "approved": true
+  },
+  {
+    "id": "563e320cee5dddcf77000158",
+    "title": "Get the mean of an array",
+    "rank": 8,
+    "tags": ["Arrays", "Algorithms"],
+    "approved": true
+  },
+  {
+    "id": "5f70c883e10f9e0001c89673",
+    "title": "Gravity Flip",
+    "rank": 8,
+    "tags": ["Puzzles", "Arrays"],
+    "approved": true
+  },
+  {
+    "id": "5b077ebdaf15be5c7f000077",
+    "title": "If you can't sleep, just count sheep!!",
+    "rank": 8,
+    "tags": ["Fundamentals", "Strings"],
+    "approved": true
+  },
+  {
+    "id": "56dd9b84fe5754786f0014f7",
+    "title": "Implement Array.prototype.filter()",
+    "rank": 8,
+    "tags": ["Arrays", "Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "57a1fd2ce298a731b20006a4",
+    "title": "Is it a palindrome?",
+    "rank": 8,
+    "tags": ["Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "555086d53eac039a2a000083",
+    "title": "Opposites Attract",
+    "rank": 8,
+    "tags": ["Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "57eae20f5500ad98e50002c5",
+    "title": "Remove String Spaces",
+    "rank": 8,
+    "tags": ["Fundamentals", "Strings"],
+    "approved": true
+  },
+  {
+    "id": "55a70521798b14d4750000a4",
+    "title": "Returning Strings",
+    "rank": 8,
+    "tags": ["Strings", "Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "57a55c8b72292d057b000594",
+    "title": "Reversing Words in a String",
+    "rank": 8,
+    "tags": ["Fundamentals", "Strings"],
+    "approved": true
+  },
+  {
+    "id": "5672a98bdbdd995fad00000f",
+    "title": "Rock Paper Scissors!",
+    "rank": 8,
+    "tags": ["Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "563b74ddd19a3ad462000054",
+    "title": "Stringy Strings",
+    "rank": 8,
+    "tags": ["Strings", "Binary", "Algorithms"],
+    "approved": true
+  },
+  {
+    "id": "592eaf848c91f248ca000012",
+    "title": "Adding words - Part I",
+    "rank": 7,
+    "tags": ["Mathematics", "Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "553e8b195b853c6db4000048",
+    "title": "All unique",
+    "rank": 7,
+    "tags": ["Algorithms", "Strings"],
+    "approved": true
+  },
+  {
+    "id": "59d9ff9f7905dfeed50000b0",
+    "title": "Alphabet symmetry",
+    "rank": 7,
+    "tags": ["Strings", "Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "56b7f2f3f18876033f000307",
+    "title": "Are the numbers in order?",
+    "rank": 7,
+    "tags": ["Fundamentals", "Mathematics", "Algorithms"],
+    "approved": true
+  },
+  {
+    "id": "59727ff285281a44e3000011",
+    "title": "Band name generator",
+    "rank": 7,
+    "tags": ["Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "55da49c166949c319200003e",
+    "title": "Basic method",
+    "rank": 7,
+    "tags": ["Arrays", "Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "56d19b2ac05aed1a20000430",
+    "title": "Between Extremes",
+    "rank": 7,
+    "tags": ["Algorithms", "Fundamentals", "Arrays"],
+    "approved": true
+  },
+  {
+    "id": "5a1ee4dfffe75f0fcb000145",
+    "title": "Bingo ( Or Not )",
+    "rank": 7,
+    "tags": ["Games", "Arrays", "Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "56b97b776ffcea598a0006f2",
+    "title": "Bubblesort Once",
+    "rank": 7,
+    "tags": ["Algorithms", "Tutorials", "Sorting"],
+    "approved": true
+  },
+  {
+    "id": "59f7fc109f0e86d705000043",
+    "title": "By 3, or not by 3? That is the question . . .",
+    "rank": 7,
+    "tags": ["Arrays", "Strings", "Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "5502c9e7b3216ec63c0001aa",
+    "title": "Categorize New Member",
+    "rank": 7,
+    "tags": ["Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "59887207635904314100007b",
+    "title": "Closest to Zero",
+    "rank": 7,
+    "tags": ["Lists", "Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "582746fa14b3892727000c4f",
+    "title": "Coding Meetup #1 - Higher-Order Functions Series - Count the number of JavaScript developers coming from Europe",
+    "rank": 7,
+    "tags": [
+      "Data Structures",
+      "Fundamentals",
+      "Algorithms",
+      "Strings",
+      "Regular Expressions",
+      "Arrays",
+      "Functional Programming"
+    ],
+    "approved": true
+  },
+  {
+    "id": "5a25ac6ac5e284cfbe000111",
+    "title": "Coloured Triangles",
+    "rank": 7,
+    "tags": ["Logic", "Strings", "Algorithms"],
+    "approved": true
+  },
+  {
+    "id": "554e4a2f232cdd87d9000038",
+    "title": "Complementary DNA",
+    "rank": 7,
+    "tags": ["Strings", "Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "5d49c93d089c6e000ff8428c",
+    "title": "Computer problem series #1: Fill the Hard Disk Drive",
+    "rank": 7,
+    "tags": ["Lists", "Arrays", "Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "590ee3c979ae8923bf00095b",
+    "title": "Convert Color image to greyscale",
+    "rank": 7,
+    "tags": ["Image Processing", "Algorithms"],
+    "approved": true
+  },
+  {
+    "id": "5da9973d06119a000e604cb6",
+    "title": "Counting Valleys",
+    "rank": 7,
+    "tags": ["Algorithms", "Strings"],
+    "approved": true
+  },
+  {
+    "id": "5412509bd436bd33920011bc",
+    "title": "Credit Card Mask",
+    "rank": 7,
+    "tags": ["Strings", "Algorithms"],
+    "approved": true
+  },
+  {
+    "id": "586909e4c66d18dd1800009b",
+    "title": "Currying functions: multiply all elements in an array",
+    "rank": 7,
+    "tags": ["Functional Programming", "Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "565b9d6f8139573819000056",
+    "title": "Decoding a message",
+    "rank": 7,
+    "tags": ["Puzzles", "Algorithms", "Cryptography", "Security", "Games"],
+    "approved": true
+  },
+  {
+    "id": "592e830e043b99888600002d",
+    "title": "Digital cypher",
+    "rank": 7,
+    "tags": ["Fundamentals", "Ciphers", "Cryptography"],
+    "approved": true
+  },
+  {
+    "id": "5747a9bbe2fab9a0c400012f",
+    "title": "DNA GC-content",
+    "rank": 7,
+    "tags": ["Strings", "Algorithms"],
+    "approved": true
+  },
+  {
+    "id": "5a04133e32b8b998dc000089",
+    "title": "Dominant array elements",
+    "rank": 7,
+    "tags": ["Arrays", "Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "57f7796697d62fc93d0001b8",
+    "title": "Double Trouble",
+    "rank": 7,
+    "tags": ["Fundamentals", "Arrays"],
+    "approved": true
+  },
+  {
+    "id": "58356a94f8358058f30004b5",
+    "title": "Drone Fly-By",
+    "rank": 7,
+    "tags": ["Fundamentals", "Strings", "Arrays"],
+    "approved": true
+  },
+  {
+    "id": "57d27a0a26427672b900046f",
+    "title": "Duck Shoot - Easy Version",
+    "rank": 7,
+    "tags": ["Strings", "Arrays"],
+    "approved": true
+  },
+  {
+    "id": "5a0d38c9697598b67a000041",
+    "title": "Eliminate the intruders! Bit manipulation",
+    "rank": 7,
+    "tags": ["Bits", "Strings", "Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "5413759479ba273f8100003d",
+    "title": "esreveR",
+    "rank": 7,
+    "tags": ["Functional Programming", "Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "5a431c0de1ce0ec33a00000c",
+    "title": "Even numbers in an array",
+    "rank": 7,
+    "tags": ["Fundamentals", "Arrays"],
+    "approved": true
+  },
+  {
+    "id": "59c62f1bdcc40560a2000060",
+    "title": "Even odd disparity",
+    "rank": 7,
+    "tags": ["Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "5b4e474305f04bea11000148",
+    "title": "Every possible sum of two digits",
+    "rank": 7,
+    "tags": ["Algorithms"],
+    "approved": true
+  },
+  {
+    "id": "5602e85d255e3240c2000024",
+    "title": "Figure Out the Notes",
+    "rank": 7,
+    "tags": ["Algorithms"],
+    "approved": true
+  },
+  {
+    "id": "56069d0c4af7f633910000d3",
+    "title": "Filter Coffee",
+    "rank": 7,
+    "tags": ["Arrays", "Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "56582133c932d8239900002e",
+    "title": "Find Count of Most Frequent Item in an Array",
+    "rank": 7,
+    "tags": ["Data Structures", "Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "544047f0cf362503e000036e",
+    "title": "Find heavy ball - level: novice",
+    "rank": 7,
+    "tags": ["Puzzles", "Logic", "Riddles"],
+    "approved": true
+  },
+  {
+    "id": "57f5e7bd60d0a0cfd900032d",
+    "title": "Find the Missing Number",
+    "rank": 7,
+    "tags": ["Algorithms"],
+    "approved": true
+  },
+  {
+    "id": "5566b0dd450172dfc4000005",
+    "title": "Finding length of the sequence",
+    "rank": 7,
+    "tags": ["Arrays", "Algorithms"],
+    "approved": true
+  },
+  {
+    "id": "5300901726d12b80e8000498",
+    "title": "Fizz Buzz",
+    "rank": 7,
+    "tags": ["Algorithms", "Fundamentals", "Arrays"],
+    "approved": true
+  },
+  {
+    "id": "5925acf31a9825d616000e74",
+    "title": "Friday the 13th Part 1",
+    "rank": 7,
+    "tags": ["Fundamentals", "Arrays"],
+    "approved": true
+  },
+  {
+    "id": "55b42574ff091733d900002f",
+    "title": "Friend or Foe?",
+    "rank": 7,
+    "tags": ["Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "55f7eb009e6614447b000099",
+    "title": "Grains",
+    "rank": 7,
+    "tags": ["Algorithms"],
+    "approved": true
+  },
+  {
+    "id": "57d1f36705c186d018000813",
+    "title": "Hells Kitchen",
+    "rank": 7,
+    "tags": ["Fundamentals", "Strings", "Arrays"],
+    "approved": true
+  },
+  {
+    "id": "557af4c6169ac832300000ba",
+    "title": "Help the Fruit Guy",
+    "rank": 7,
+    "tags": ["Arrays", "Strings", "Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "56a1c074f87bc2201200002e",
+    "title": "How many are smaller than me?",
+    "rank": 7,
+    "tags": ["Arrays", "Algorithms"],
+    "approved": true
+  },
+  {
+    "id": "5c44b0b200ce187106452139",
+    "title": "How many arguments",
+    "rank": 7,
+    "tags": ["Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "57d60363a65454701d000e11",
+    "title": "I guess this is a 7kyu kata #6: Fruit Ninja I",
+    "rank": 7,
+    "tags": ["Puzzles"],
+    "approved": true
+  },
+  {
+    "id": "582c81d982a0a65424000201",
+    "title": "Is every value in the array an array?",
+    "rank": 7,
+    "tags": ["Arrays", "Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "592a33e549fe9840a8000ba1",
+    "title": "isEven? - Bitwise Series",
+    "rank": 7,
+    "tags": ["Restricted", "Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "58644e8ddf95f81a38001d8d",
+    "title": "Make a square box!",
+    "rank": 7,
+    "tags": ["Strings", "Arrays", "ASCII Art", "Algorithms"],
+    "approved": true
+  },
+  {
+    "id": "57a60bad72292d3e93000a5a",
+    "title": "Make acronym",
+    "rank": 7,
+    "tags": ["Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "5a34da5dee1aae516d00004a",
+    "title": "Matrix creation",
+    "rank": 7,
+    "tags": [
+      "Fundamentals",
+      "Arrays",
+      "Matrix",
+      "Linear Algebra",
+      "Mathematics",
+      "Language Features"
+    ],
+    "approved": true
+  },
+  {
+    "id": "588a3c3ef0fbc9c8e1000095",
+    "title": "max diff - easy",
+    "rank": 7,
+    "tags": ["Mathematics", "Lists", "Arrays", "Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "5a7893ef0025e9eb50000013",
+    "title": "Maximum Gap (Array Series #4)",
+    "rank": 7,
+    "tags": ["Fundamentals", "Arrays"],
+    "approved": true
+  },
+  {
+    "id": "583af10620dda4da270000c5",
+    "title": "Merge two arrays",
+    "rank": 7,
+    "tags": ["Fundamentals", "Arrays"],
+    "approved": true
+  },
+  {
+    "id": "59cd155d1a68b70f8e000117",
+    "title": "Middle Me",
+    "rank": 7,
+    "tags": ["Fundamentals", "Strings"],
+    "approved": true
+  },
+  {
+    "id": "5f55ecd770692e001484af7d",
+    "title": "Mirror, mirror, on the wall...",
+    "rank": 7,
+    "tags": ["Algorithms", "Fundamentals", "Arrays"],
+    "approved": true
+  },
+  {
+    "id": "58daa7617332e59593000006",
+    "title": "Most digits",
+    "rank": 7,
+    "tags": ["Strings", "Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "5dd5128f16eced000e4c42ba",
+    "title": "Most valuable character",
+    "rank": 7,
+    "tags": ["Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "5b16490986b6d336c900007d",
+    "title": "My Language Skills",
+    "rank": 7,
+    "tags": ["Sorting", "Arrays", "Algorithms"],
+    "approved": true
+  },
+  {
+    "id": "585eaef9851516fcae00004d",
+    "title": "Naughty or Nice?",
+    "rank": 7,
+    "tags": ["Mathematics", "Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "5648b12ce68d9daa6b000099",
+    "title": "Number of People in the Bus",
+    "rank": 7,
+    "tags": ["Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "5d376cdc9bcee7001fcb84c0",
+    "title": "Odd Ones Out!",
+    "rank": 7,
+    "tags": ["Fundamentals", "Arrays", "Algorithms"],
+    "approved": true
+  },
+  {
+    "id": "5949481f86420f59480000e7",
+    "title": "Odd or Even?",
+    "rank": 7,
+    "tags": ["Fundamentals", "Arrays"],
+    "approved": true
+  },
+  {
+    "id": "5a941f4e1a60f6e8a70025fe",
+    "title": "Odds-Index",
+    "rank": 7,
+    "tags": ["Algorithms"],
+    "approved": true
+  },
+  {
+    "id": "5b3e1dca3da310a4390000f3",
+    "title": "Offload your work!",
+    "rank": 7,
+    "tags": ["Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "5734c38da41454b7f700106e",
+    "title": "Only one",
+    "rank": 7,
+    "tags": ["Algorithms"],
+    "approved": true
+  },
+  {
+    "id": "59b710ed70a3b7dd8f000027",
+    "title": "Possibilities Array",
+    "rank": 7,
+    "tags": ["Arrays", "Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "5a905c2157c562994900009d",
+    "title": "Product Array (Array Series #5)",
+    "rank": 7,
+    "tags": ["Fundamentals", "Arrays"],
+    "approved": true
+  },
+  {
+    "id": "569924899aa8541eb200003f",
+    "title": "Quicksum",
+    "rank": 7,
+    "tags": ["Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "5c06a930717256064b0001ab",
+    "title": "Rap-Name Generator",
+    "rank": 7,
+    "tags": ["Fundamentals", "Mathematics", "Strings"],
+    "approved": true
+  },
+  {
+    "id": "583ed487ee36e2a8d20000e8",
+    "title": "Recursive Ninja",
+    "rank": 7,
+    "tags": ["Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "57547f9182655569ab0008c4",
+    "title": "Recursive Replication",
+    "rank": 7,
+    "tags": ["Recursion", "Algorithms"],
+    "approved": true
+  },
+  {
+    "id": "563089b9b7be03472d00002b",
+    "title": "Remove All The Marked Elements of a List",
+    "rank": 7,
+    "tags": ["Fundamentals", "Algorithms", "Data Structures"],
+    "approved": true
+  },
+  {
+    "id": "59de795c289ef9197f000c48",
+    "title": "Remove B M W",
+    "rank": 7,
+    "tags": ["Fundamentals", "Strings", "Regular Expressions"],
+    "approved": true
+  },
+  {
+    "id": "58067088c27998b119000451",
+    "title": "Reverse Factorials",
+    "rank": 7,
+    "tags": ["Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "5abd66a5ccfd1130b30000a9",
+    "title": "Row Weights",
+    "rank": 7,
+    "tags": ["Fundamentals", "Arrays"],
+    "approved": true
+  },
+  {
+    "id": "52dbae61ca039685460001ae",
+    "title": "Search for letters",
+    "rank": 7,
+    "tags": ["Strings", "Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "56b58d11e3a3a7cade000792",
+    "title": "Sexy Primes <3",
+    "rank": 7,
+    "tags": ["Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "57f8ee485cae443c4d000127",
+    "title": "Spacify",
+    "rank": 7,
+    "tags": ["Fundamentals", "Strings", "Arrays"],
+    "approved": true
+  },
+  {
+    "id": "550aea365951383698000727",
+    "title": "Split an array",
+    "rank": 7,
+    "tags": ["Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "56b8903933dbe5831e000c76",
+    "title": "Spoonerize Me",
+    "rank": 7,
+    "tags": ["Strings", "Algorithms"],
+    "approved": true
+  },
+  {
+    "id": "5546180ca783b6d2d5000062",
+    "title": "Squares sequence",
+    "rank": 7,
+    "tags": ["Mathematics", "Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "5c1ac4f002c59c725900003f",
+    "title": "Streaky Patterns in Coin Flips",
+    "rank": 7,
+    "tags": ["Strings", "Algorithms", "Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "5822d89270ca28c85c0000f3",
+    "title": "String Scramble",
+    "rank": 7,
+    "tags": ["Fundamentals", "Strings", "Arrays"],
+    "approved": true
+  },
+  {
+    "id": "5b5e0ef007a26632c400002a",
+    "title": "Sub-array elements sum",
+    "rank": 7,
+    "tags": ["Arrays", "Lists", "Algorithms"],
+    "approved": true
+  },
+  {
+    "id": "586f6741c66d18c22800010a",
+    "title": "Sum of a sequence",
+    "rank": 7,
+    "tags": ["Fundamentals", "Algorithms", "Mathematics"],
+    "approved": true
+  },
+  {
+    "id": "56d5166ec87df55dbe000063",
+    "title": "Sum of Array Averages",
+    "rank": 7,
+    "tags": ["Arrays", "Mathematics", "Algorithms"],
+    "approved": true
+  },
+  {
+    "id": "5d5ee4c35162d9001af7d699",
+    "title": "Sum of Minimums!",
+    "rank": 7,
+    "tags": ["Fundamentals", "Arrays"],
+    "approved": true
+  },
+  {
+    "id": "56e9e4f516bcaa8d4f001763",
+    "title": "Sum of numbers from 0 to N",
+    "rank": 7,
+    "tags": ["Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "551e51155ed5ab41450006e1",
+    "title": "Sum Times Tables",
+    "rank": 7,
+    "tags": ["Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "52f3149496de55aded000410",
+    "title": "Summing a number's digits",
+    "rank": 7,
+    "tags": ["Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "56d344c7fd3a52566700124b",
+    "title": "Test Your Knowledge Of Function Scope",
+    "rank": 7,
+    "tags": ["Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "5acf710f46b4cb00810001e2",
+    "title": "The Deca Tree",
+    "rank": 7,
+    "tags": ["Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "54f9c37106098647f400080a",
+    "title": "The dropWhile Function",
+    "rank": 7,
+    "tags": ["Functional Programming", "Arrays", "Algorithms"],
+    "approved": true
+  },
+  {
+    "id": "570f6436b29c708a32000826",
+    "title": "The First Non Repeated Character In A String",
+    "rank": 7,
+    "tags": ["Algorithms", "Strings", "Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "57ed4cef7b45ef8774000014",
+    "title": "The Office II - Boredom Score",
+    "rank": 7,
+    "tags": ["Arrays", "Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "57f604a21bd4fe771b00009c",
+    "title": "The Office IV - Find a Meeting Room",
+    "rank": 7,
+    "tags": ["Fundamentals", "Arrays"],
+    "approved": true
+  },
+  {
+    "id": "5a87449ab1710171300000fd",
+    "title": "Tidy Number (Special Numbers Series #9)",
+    "rank": 7,
+    "tags": ["Fundamentals", "Arrays", "Strings"],
+    "approved": true
+  },
+  {
+    "id": "5b6375f707a2664ada00002a",
+    "title": "Who's Online?",
+    "rank": 7,
+    "tags": ["Arrays", "Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "598d91785d4ce3ec4f000018",
+    "title": "Word values",
+    "rank": 7,
+    "tags": ["Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "577c349edf78c178a1000108",
+    "title": "Xmas Tree",
+    "rank": 7,
+    "tags": ["Algorithms"],
+    "approved": true
+  },
+  {
+    "id": "55a5c82cd8e9baa49000004c",
+    "title": "Count the divisible numbers",
+    "rank": 6,
+    "tags": ["Fundamentals", "Algorithms"],
+    "approved": true
+  },
+  {
+    "id": "5a405ba4e1ce0e1d7800012e",
+    "title": "Custom Christmas Tree",
+    "rank": 6,
+    "tags": ["Strings", "ASCII Art", "Puzzles"],
+    "approved": true
+  },
+  {
+    "id": "54b42f9314d9229fd6000d9c",
+    "title": "Duplicate Encoder",
+    "rank": 6,
+    "tags": ["Strings", "Arrays", "Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "5f631ed489e0e101a70c70a0",
+    "title": "Elimination Tournament",
+    "rank": 6,
+    "tags": ["Arrays", "Fundamentals", "Algorithms"],
+    "approved": true
+  },
+  {
+    "id": "59590976838112bfea0000fa",
+    "title": "English beggars",
+    "rank": 6,
+    "tags": ["Queues", "Arrays", "Lists", "Recursion", "Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "5679aa472b8f57fb8c000047",
+    "title": "Equal Sides Of An Array",
+    "rank": 6,
+    "tags": ["Algorithms", "Arrays", "Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "5420fc9bb5b2c7fd57000004",
+    "title": "Highest Rank Number in an Array",
+    "rank": 6,
+    "tags": ["Arrays", "Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "54129112fb7c188740000162",
+    "title": "Prefill an Array",
+    "rank": 6,
+    "tags": ["Arrays", "Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "5878520d52628a092f0002d0",
+    "title": "String transformer",
+    "rank": 6,
+    "tags": ["Fundamentals"],
+    "approved": true
+  },
+  {
+    "id": "530e15517bc88ac656000716",
+    "title": "Rot13",
+    "rank": 5,
+    "tags": ["Ciphers", "Fundamentals"],
+    "approved": true
+  }
+]

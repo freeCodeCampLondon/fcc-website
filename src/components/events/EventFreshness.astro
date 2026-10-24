@@ -1,0 +1,69 @@
+---
+// Pages are built once a day, so an event can end between builds. This
+// script corrects what the build decided, using these attributes:
+// - data-event-end="<ISO>": hide the element once the event has ended
+// - data-event-ended="<ISO>": show the element (starts hidden) once it has ended
+// - data-next-event: a box of data-next-candidate="<ISO end>" cards; shows the
+//   first one that has not ended, or its data-next-fallback when none is left,
+//   and hides the shown event's entry (data-upcoming-id) in upcoming lists
+// - data-event-list: hidden when all its data-upcoming-id entries are hidden
+// Without JavaScript the build-time state stays, which is right for a day.
+---
+
+<script is:inline>
+    (() => {
+        const run = () => {
+            const now = Date.now();
+            const ended = (el, attr) =>
+                Date.parse(el.getAttribute(attr)) <= now;
+
+            for (const el of document.querySelectorAll("[data-event-end]")) {
+                if (ended(el, "data-event-end")) {
+                    el.hidden = true;
+                }
+            }
+            for (const el of document.querySelectorAll("[data-event-ended]")) {
+                if (ended(el, "data-event-ended")) {
+                    el.hidden = false;
+                }
+            }
+            for (const box of document.querySelectorAll("[data-next-event]")) {
+                const candidates = [
+                    ...box.querySelectorAll("[data-next-candidate]"),
+                ];
+                const next = candidates.find(
+                    (el) => !ended(el, "data-next-candidate"),
+                );
+                for (const el of candidates) {
+                    el.hidden = el !== next;
+                }
+                const fallback = box.querySelector("[data-next-fallback]");
+                if (fallback) {
+                    fallback.hidden = Boolean(next);
+                }
+                for (const el of document.querySelectorAll(
+                    "[data-upcoming-id]",
+                )) {
+                    if (
+                        next &&
+                        el.dataset.upcomingId === next.dataset.eventId
+                    ) {
+                        el.hidden = true;
+                    } else if (!ended(el, "data-event-end")) {
+                        el.hidden = false;
+                    }
+                }
+            }
+            for (const list of document.querySelectorAll("[data-event-list]")) {
+                const items = [...list.querySelectorAll("[data-upcoming-id]")];
+                list.hidden = items.every((el) => el.hidden);
+            }
+        };
+
+        if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", run);
+        } else {
+            run();
+        }
+    })();
+</script>

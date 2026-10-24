@@ -1,0 +1,115 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import { pageMeta } from "../../data/pageMeta";
+import Icon from "../../components/Icon.astro";
+import SlidesAccess from "../../components/resources/SlidesAccess.astro";
+import { aiWorkshopDecks, presenter } from "../../data/resources/ai-workshops";
+import { formatEventDate } from "../../lib/events";
+
+const events = new Map(
+    (await getCollection("events")).map(({ id, data }) => [id, data]),
+);
+
+// Newest first, with the workshop title and date from the events collection.
+const decks = aiWorkshopDecks
+    .map((deck) => ({ ...deck, event: events.get(deck.eventId) }))
+    .filter((deck) => deck.event)
+    .sort((a, b) => b.number - a.number);
+
+// Event titles look like "freeCodeCamp x Encode | AI - Workshop: <topic>" or
+// "freeCodeCamp | AI Edition - <topic>"; keep just the topic.
+const topic = (title: string) =>
+    title
+        .split("|")
+        .pop()!
+        .replace(/^\s*AI( Edition)?\s*-\s*(Workshop:\s*)?/i, "")
+        .trim();
+---
+
+<Layout {...pageMeta["/resources/ai-workshops/"]}>
+    <div class="max-w-prose">
+        <h1 class="text-4xl font-extrabold">AI workshop slides</h1>
+        <p class="mt-4">
+            Slides from our hands-on AI workshops, presented by{" "}
+            <a
+                href={`https://github.com/${presenter.github}`}
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                {presenter.name}
+                <span class="sr-only">(opens in a new tab)</span>
+            </a>{" "}
+            and run with Encode Club. Each workshop focuses on running AI
+            privately on your own machine. Work through them at your own pace,
+            or come to the next one.
+        </p>
+        <SlidesAccess />
+        <p class="mt-4">
+            <a class="inline-block py-2" href="/events/">
+                See upcoming events
+            </a>
+        </p>
+        <ol class="mt-6 flex flex-col gap-4">
+            {decks.map((deck) => (
+                <li>
+                    <article class="rounded-lg border border-border bg-surface p-4">
+                        <p class="text-sm text-muted">
+                            Workshop {deck.number} ·{" "}
+                            <time datetime={deck.event!.start.toISOString()}>
+                                {formatEventDate(deck.event!.start)}
+                            </time>
+                        </p>
+                        <h2 class="mt-1 text-xl font-bold">
+                            {topic(deck.event!.title)}
+                        </h2>
+                        <ul class="mt-3 flex flex-wrap gap-x-6 gap-y-1">
+                            <li>
+                                <a
+                                    class="inline-flex items-center gap-1.5 py-2 font-bold"
+                                    href={deck.slidesUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <Icon name="slides" class="size-4" />
+                                    View the slides
+                                    <span class="sr-only">
+                                        for workshop {deck.number} (opens in a
+                                        new tab)
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    class="inline-flex items-center gap-1.5 py-2"
+                                    href={`/events/${deck.eventId}/`}
+                                >
+                                    <Icon name="calendar" class="size-4" />
+                                    Event details
+                                    <span class="sr-only">
+                                        for workshop {deck.number}
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    class="inline-flex items-center gap-1.5 py-2"
+                                    href={deck.sourceUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <Icon name="github" class="size-4" />
+                                    Source on GitHub
+                                    <span class="sr-only">
+                                        for workshop {deck.number} (opens in a
+                                        new tab)
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </article>
+                </li>
+            ))}
+        </ol>
+    </div>
+</Layout>

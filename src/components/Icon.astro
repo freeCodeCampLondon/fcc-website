@@ -1,20 +1,76 @@
 ---
-import type { ImageMetadata } from "astro";
-import { Image } from "astro:assets";
+// Inline SVG icons, rendered at build time (no client JavaScript). Brand marks
+// come from Simple Icons (CC0), everything else from Lucide (ISC). Icons use
+// currentColor, so they follow the text colour and the light/dark theme.
+// They are decorative: the link or label next to them carries the meaning.
+import { siDiscord, siGithub, siMeetup } from "simple-icons";
+import {
+    BookOpen,
+    CalendarDays,
+    Clock,
+    CodeXml,
+    MapPin,
+    PenLine,
+    Presentation,
+    Users,
+} from "lucide-static";
+
+const brands = {
+    discord: siDiscord,
+    github: siGithub,
+    meetup: siMeetup,
+};
+
+const lucide = {
+    "book-open": BookOpen,
+    calendar: CalendarDays,
+    clock: Clock,
+    code: CodeXml,
+    "map-pin": MapPin,
+    pen: PenLine,
+    slides: Presentation,
+    users: Users,
+};
+
+export type IconName = keyof typeof brands | keyof typeof lucide;
 
 interface Props {
-    alt: string;
-    src: ImageMetadata;
-    href: string;
+    name: IconName;
+    /** Tailwind size classes; default 1.25rem square. */
+    class?: string;
 }
-const { href, alt, src } = Astro.props;
+
+const { name, class: className = "size-5" } = Astro.props;
+const brand = name in brands ? brands[name as keyof typeof brands] : undefined;
+// Lucide ships whole <svg> strings; keep only the shapes inside.
+const shapes = brand
+    ? undefined
+    : lucide[name as keyof typeof lucide]
+          .replace(/^[\s\S]*?<svg[^>]*>/, "")
+          .replace(/<\/svg>\s*$/, "");
 ---
 
-<a
-    class="bg-gray-500 p-3 fill-white hover:bg-gray-400"
-    href={href}
-    target="_blank"
-    rel="noopener noreferrer"
->
-    <Image class="fill-white" src={src} alt={alt} width={45} height={45} />
-</a>
+{brand ? (
+    <svg
+        class:list={["inline-block shrink-0", className]}
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        aria-hidden="true"
+        focusable="false"
+    >
+        <path d={brand.path} />
+    </svg>
+) : (
+    <svg
+        class:list={["inline-block shrink-0", className]}
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+        focusable="false"
+        set:html={shapes}
+    />
+)}

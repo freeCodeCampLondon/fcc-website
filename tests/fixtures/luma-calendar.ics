@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Luma//freeCodeCamp London//EN
+X-WR-CALNAME:freeCodeCamp London
+X-WR-CALDESC:Luma Calendar
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+DTSTART:20261028T180000Z
+DTEND:20261028T210000Z
+DTSTAMP:20261024T131035Z
+ORGANIZER;CN="freeCodeCampLondon":MAILTO:calendar-invite@lu.ma
+UID:evt-ko44LNFt2Rq9E6C@events.lu.ma
+SUMMARY:freeCodeCamp x Encode | AI - Jev Workshop: give your AI agents a f
+ ast, cheap brain for making decisions safely, locally & creatively!
+DESCRIPTION:Get up-to-date information at: https://luma.com/w6i73bgm\n\nAd
+ dress:\nEncode Hub\nLondon, England\nUnited Kingdom\n\nHosted by freeCodeC
+ ampLondon & 4 others
+LOCATION:Encode Hub, 41 Pitfield St, London N1 6DA, UK
+GEO:51.5275865;-0.08377020000000002
+SEQUENCE:215010635
+STATUS:TENTATIVE
+END:VEVENT
+END:VCALENDAR

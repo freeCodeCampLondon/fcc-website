@@ -31,3 +31,22 @@ We hope that members of the freeCodeCamp London community will benefit from the 
 If you are a new developer, and you haven't used version control tools such as Git and GitHub before, the experience can be confusing at first.
 A good place to start is to check out [freeCodeCamp&#39;s own article on Git and GitHub](https://www.freecodecamp.org/news/introduction-to-git-and-github/). The article explains key concepts and contains links to other resources so that you can get more information or alternative explanations as needed.
 Also feel free to drop into our discord and ask us for advice!
+
+# Writing a blog post
+
+Anyone in the community can write for the blog. Posts are Markdown files, and you submit them as a pull request.
+
+1. Fork this repository and clone your fork.
+2. Copy `src/content/blog/_template.md` to `src/content/blog/<slug>.md`. The slug is lowercase words joined by hyphens, for example `my-first-hackathon.md`, and becomes the address: `/blog/my-first-hackathon/`.
+3. Fill in the front matter (the fields between the `---` lines). The template explains each one. Keep `draft: true` while you write.
+4. Write the post in Markdown. Start sections with `##` (the title is already the main heading). Put images next to the post and give each one alt text.
+5. Preview it with `npm install` and then `npm run dev`, and open http://localhost:4321/blog/.
+6. Set `draft: false`, run `npm run format:fix`, commit, push to your fork and open a pull request.
+
+Any organiser can review and merge a post. We check that it:
+
+- is on topic for the community and accurate
+- is kind and inclusive, in line with the [freeCodeCamp code of conduct](https://www.freecodecamp.org/news/code-of-conduct/)
+- contains no personal data or credentials (yours or anyone else's), and people named or pictured have agreed
+- uses images you are allowed to share, each with alt text
+- has valid front matter (the build checks it)

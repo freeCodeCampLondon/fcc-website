@@ -1,66 +1,138 @@
 ---
 import FAQ from "../components/faq/FAQ.astro";
-import Navbar from "../components/Navbar.astro";
+import Icon from "../components/Icon.astro";
 import Layout from "../layouts/Layout.astro";
+import {
+    aboutFreeCodeCamp,
+    getInvolved,
+    intro,
+    whatToExpect,
+} from "../data/about";
+import { pageMeta } from "../data/pageMeta";
+
+const sectionClass = "mt-12";
+const headingClass = "text-2xl font-extrabold";
 ---
 
-<Layout title="About Us">
-    <Navbar />
+<Layout {...pageMeta["/about-us/"]}>
+    <div class="max-w-prose">
+        <h1 class="text-4xl font-extrabold">About us</h1>
+        {intro.map((paragraph) => (
+            <p class="mt-4">{paragraph}</p>
+        ))}
 
-    <div class="w-full text-justify flex justify-center items-center flex-col">
-        <div class="w-96 lg:w-1/2 m-5">
-            <h1 class="font-extrabold text-4xl">About us</h1>
-            <p>
-                Welcome to freeCodeCamp London! We’re a community of coding
-                enthusiasts, from beginners to seasoned developers, gathering to
-                learn, share, and grow together. We believe coding should be
-                accessible to everyone, which is why freeCodeCamp is completely
-                free and open to anyone with a computer, internet connection,
-                and a desire to learn.
+        <section aria-labelledby="freecodecamp-heading" class={sectionClass}>
+            <h2 id="freecodecamp-heading" class={headingClass}>
+                What is freeCodeCamp?
+            </h2>
+            {aboutFreeCodeCamp.map((paragraph) => (
+                <p class="mt-4">{paragraph}</p>
+            ))}
+            <p class="mt-4">
+                <a
+                    href="https://www.freecodecamp.org/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Start learning on freeCodeCamp.org
+                </a>
             </p>
-            <h2 class="font-extrabold text-2xl">What is freeCodeCamp?</h2>
-            <p>
-                freeCodeCamp is a free, online coding platform that offers a
-                structured curriculum for anyone looking to break into software
-                and web development. With projects, exercises, and an active
-                global network, it’s a great place to start (or advance) your
-                coding journey. And with chapters like freeCodeCamp London,
-                there are opportunities to connect locally too! At freeCodeCamp
-                London, we host regular meetups to bring our community together.
-                Whether you’re working through coding challenges, looking for
-                career advice, or just interested in meeting fellow coders, our
-                meetups are designed to be relaxed and beginner-friendly.
+        </section>
+
+        <section aria-labelledby="meetup-heading" class={sectionClass}>
+            <h2 id="meetup-heading" class={headingClass}>
+                What happens at a meetup
+            </h2>
+            <p class="mt-4">
+                The format varies by event, so check the
+                <a href="/events/">event page</a> for what is planned. Most
+                meetups include some of these:
             </p>
-            Here’s what you can expect:
-            <ul class="mt-0 list-disc pl-4">
-                <li>
-                    Group Learning: At the start, we usually split into groups
-                    based on interests. You might join a group tackling specific
-                    coding challenges, discussing job-seeking strategies, or
-                    chatting about all things tech.
-                </li>
-
-                <li>
-                    Show and Tell: We start each meetup with a short “show and
-                    tell” where members can share projects, recent learnings, or
-                    anything coding-related. Interested? Let us know on Discord!
-                </li>
-
-                <li>
-                    Flexible Format: Feel free to move around between groups and
-                    connect with different people throughout the session. This
-                    is a great way to meet other learners and experienced
-                    developers alike.
-                </li>
+            <ul class="mt-4 flex flex-col gap-4">
+                {whatToExpect.map((item) => (
+                    <li class="rounded-lg border border-border bg-surface p-4">
+                        <h3 class="text-xl font-bold">{item.title}</h3>
+                        <p class="mt-1">{item.text}</p>
+                    </li>
+                ))}
             </ul>
-            <FAQ />
-        </div>
-    </div>
+            <p class="mt-4">
+                Venues vary across London; each event page shows the venue and
+                how to sign up.
+            </p>
+        </section>
 
-    <style>
-        p {
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-        }
-    </style>
+        <section aria-labelledby="conduct-heading" class={sectionClass}>
+            <h2 id="conduct-heading" class={headingClass}>
+                Code of conduct
+            </h2>
+            <p class="mt-4">
+                We want every meetup to be friendly, safe and welcoming for
+                everyone. We follow the
+                <a
+                    href="https://www.freecodecamp.org/news/code-of-conduct/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    freeCodeCamp code of conduct
+                </a>
+                at our events and in our online spaces. If something makes you
+                uncomfortable, please tell one of the organisers at the event or
+                message us on Discord.
+            </p>
+        </section>
+
+        <section aria-labelledby="involved-heading" class={sectionClass}>
+            <h2 id="involved-heading" class={headingClass}>
+                Get involved
+            </h2>
+            <ul class="mt-4 flex flex-col gap-4">
+                {getInvolved.map((item) => (
+                    <li>
+                        <a
+                            class="inline-flex items-center gap-2 py-1 text-lg font-bold"
+                            href={item.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <Icon name={item.icon} />
+                            {item.label}
+                            <span class="sr-only">(opens in a new tab)</span>
+                        </a>
+                        <p>{item.text}</p>
+                    </li>
+                ))}
+            </ul>
+        </section>
+
+        <FAQ />
+
+        <section
+            id="privacy"
+            aria-labelledby="privacy-heading"
+            class={`${sectionClass} scroll-mt-24`}
+        >
+            <h2 id="privacy-heading" class={headingClass}>
+                Privacy
+            </h2>
+            <p class="mt-4">
+                This website uses Cloudflare Web Analytics to count visits and
+                see which pages are useful. It does not use cookies, does not
+                track you across other websites and does not collect personal
+                data. We do not use any other analytics or tracking.
+            </p>
+            <p class="mt-4">
+                See
+                <a
+                    href="https://www.cloudflare.com/privacypolicy/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Cloudflare's privacy policy
+                </a>{" "}
+                for details. Links to Discord, Luma, GitHub and freeCodeCamp
+                take you to services with their own privacy policies.
+            </p>
+        </section>
+    </div>
 </Layout>

@@ -2,33 +2,54 @@
   "name": "fcc-website",
   "type": "module",
   "version": "0.0.1",
+  "engines": {
+    "node": ">=26"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
+    "test": "vitest run",
+    "test:watch": "SKIP_BUILD=1 vitest",
+    "test:e2e": "playwright test",
     "astro": "astro",
-    "lint": "eslint \"src/**/*.{js,ts,jsx,tsx,astro}\"",
+    "data:codewars": "node scripts/refresh-codewars.mjs",
+    "lint": "eslint \"src/**/*.{js,ts,jsx,tsx,astro}\" \"tests/**/*.ts\" \"e2e/**/*.ts\" \"scripts/**/*.mjs\" vitest.config.ts playwright.config.ts",
     "format": "prettier --check  \"**/*.{js,jsx,ts,tsx,md,mdx,astro}\"",
     "format:fix": "prettier --write  \"**/*.{js,jsx,ts,tsx,md,mdx,astro}\""
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.4",
-    "@astrojs/tailwind": "^5.1.2",
-    "astro": "^4.16.6",
-    "tailwindcss": "^3.4.14",
-    "typescript": "^5.6.3"
+    "@astrojs/check": "^0.9.12",
+    "@astrojs/markdown-satteri": "^0.4.5",
+    "@astrojs/rss": "^4.0.19",
+    "@astrojs/sitemap": "^3.7.4",
+    "@fontsource/lato": "^5.3.0",
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "^7.4.2",
+    "astro-og-canvas": "^0.13.2",
+    "lucide-static": "^1.61.0",
+    "node-ical": "^0.27.3",
+    "simple-icons": "^16.35.0",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^6.0.0"
   },
   "devDependencies": {
-    "@eslint/js": "^9.13.0",
-    "@typescript-eslint/parser": "^8.11.0",
-    "eslint": "^9.13.0",
-    "eslint-plugin-astro": "^1.3.0",
-    "eslint-plugin-jsx-a11y": "^6.10.1",
-    "globals": "^15.11.0",
-    "prettier": "^3.3.3",
-    "prettier-config-standard": "^7.0.0",
-    "prettier-plugin-astro": "^0.14.1",
-    "typescript-eslint": "^8.11.0"
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.64.1",
+    "@typescript-eslint/parser": "^8.72.0",
+    "eslint": "^10.13.0",
+    "eslint-plugin-astro": "^3.2.1",
+    "eslint-plugin-jsx-a11y-x": "^0.2.0",
+    "globals": "^17.13.0",
+    "happy-dom": "^21.0.4",
+    "prettier": "^3.9.10",
+    "prettier-plugin-astro": "^1.1.2",
+    "typescript-eslint": "^8.72.0",
+    "vitest": "^5.0.5"
+  },
+  "allowScripts": {
+    "esbuild": false,
+    "sharp": false
   }
 }

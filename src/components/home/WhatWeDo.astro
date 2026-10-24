@@ -1,0 +1,22 @@
+---
+import { whatToExpect } from "../../data/about";
+import { whatWeDo } from "../../data/home";
+---
+
+<section aria-labelledby="what-we-do">
+    <h2 id="what-we-do" class="text-2xl font-extrabold">
+        {whatWeDo.heading}
+    </h2>
+    <p class="mt-2 text-muted">{whatWeDo.intro}</p>
+    <ul class="mt-4 grid gap-4 md:grid-cols-3">
+        {whatToExpect.map((item) => (
+            <li class="rounded-lg border border-border bg-surface p-5">
+                <h3 class="text-xl font-bold">{item.title}</h3>
+                <p class="mt-2">{item.text}</p>
+            </li>
+        ))}
+    </ul>
+    <a class="mt-2 inline-block py-2" href={whatWeDo.more.href}>
+        {whatWeDo.more.label}
+    </a>
+</section>

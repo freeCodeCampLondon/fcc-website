@@ -1,0 +1,82 @@
+---
+import { getCollection } from "astro:content";
+import EventFreshness from "./events/EventFreshness.astro";
+import RegisterButton from "./events/RegisterButton.astro";
+import { formatEventDate, formatEventTimes, splitEvents } from "../lib/events";
+import Icon from "./Icon.astro";
+
+interface Props {
+    /** utm_campaign for the register link: "home" or "events" */
+    campaign: string;
+}
+
+const { campaign } = Astro.props;
+const { upcoming } = splitEvents(await getCollection("events"), new Date());
+// Every scheduled upcoming event is a candidate: the build shows the first,
+// and EventFreshness moves on to the next one if it ends before a rebuild.
+const candidates = upcoming.filter(
+    (entry) => entry.data.status === "scheduled",
+);
+---
+
+<section aria-labelledby="next-meetup" data-next-event>
+    <h2 id="next-meetup" class="mb-4 text-2xl font-extrabold">
+        Next meetup
+    </h2>
+    {candidates.map(({ data: event }, index) => (
+        <article
+            class="rounded-md border border-border bg-surface p-4 sm:p-6"
+            data-next-candidate={event.end.toISOString()}
+            data-event-id={event.id}
+            hidden={index > 0}
+        >
+            <h3 class="text-xl font-bold break-words">
+                <a href={`/events/${event.id}/`}>{event.title}</a>
+            </h3>
+            <p class="mt-2 flex items-start gap-2">
+                <Icon name="calendar" class="mt-0.5 size-5 text-muted" />
+                <span>
+                    {formatEventDate(event.start)}, {formatEventTimes(event)}
+                </span>
+            </p>
+            {event.venue && (
+                <p class="mt-1 flex items-start gap-2 text-muted">
+                    <Icon name="map-pin" class="mt-0.5 size-5" />
+                    {[event.venue.name, event.venue.address]
+                        .filter(Boolean)
+                        .join(", ")}
+                </p>
+            )}
+            {event.summary && <p class="mt-2">{event.summary}</p>}
+            <div class="mt-4 flex flex-wrap items-center gap-4">
+                <RegisterButton event={event} campaign={campaign} />
+                <a class="inline-block py-2" href={`/events/${event.id}/`}>
+                    Event details
+                </a>
+            </div>
+        </article>
+    ))}
+    <p
+        class="[&_a]:underline [&_a]:underline-offset-4"
+        data-next-fallback
+        hidden={candidates.length > 0}
+    >
+        Next meetup coming soon. Follow us on{" "}
+        <a
+            href="https://luma.com/freecodecamp.london"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Luma
+        </a>{" "}
+        and{" "}
+        <a
+            href="https://discord.gg/hmVycPYAue"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Discord
+        </a>
+    </p>
+</section>
+<EventFreshness />

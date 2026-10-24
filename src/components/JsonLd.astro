@@ -1,0 +1,22 @@
+---
+// Renders schema.org structured data as JSON-LD. Put it in the page head
+// through the layout's head slot:
+//
+//   <Layout {...pageMeta["/"]}>
+//       <JsonLd slot="head" data={organization} />
+//
+// Build the data with the helpers in src/lib/structuredData.ts.
+export interface Props {
+    data: Record<string, unknown>;
+}
+
+const { data } = Astro.props;
+
+// Escape "<" so text in the data can never close the script element early.
+const json = JSON.stringify({
+    "@context": "https://schema.org",
+    ...data,
+}).replace(/</g, "\\u003c");
+---
+
+<script type="application/ld+json" is:inline set:html={json} />

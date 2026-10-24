@@ -1,0 +1,65 @@
+AI workshop slides | freeCodeCamp London
+Skip to content freeCodeCamp London About Us
+Coding Challenges
+Blog
+Events
+Light theme
+About Us
+Coding Challenges
+Blog
+Events
+AI workshop slides
+Slides from our hands-on AI workshops, presented by Andy (opens in a new tab) and run with Encode Club. Each workshop focuses on running AI privately on your own machine. Work through them at your own pace, or come to the next one.
+The slides are password protected. Ask for the password at one of our AI workshops or on our Discord (opens in a new tab)
+The code for each deck is public on GitHub. The slides from workshop 1 are readable there too; later decks load their content only once the password is entered.
+See upcoming events
+Workshop 8 · Wednesday 19 August 2026
+Hermes Agent w/ your Local LLM models such as Qwen, Deepseek, etc
+View the slides for workshop 8 (opens in a new tab)
+Event details for workshop 8
+Source on GitHub for workshop 8 (opens in a new tab)
+Workshop 7 · Thursday 11 June 2026
+Vibecoding Using Local AIs
+View the slides for workshop 7 (opens in a new tab)
+Event details for workshop 7
+Source on GitHub for workshop 7 (opens in a new tab)
+Workshop 6 · Wednesday 25 March 2026
+Breaking Down OpenClaw (From Minimal Mode to Advanced Mode w/ Skills)
+View the slides for workshop 6 (opens in a new tab)
+Event details for workshop 6
+Source on GitHub for workshop 6 (opens in a new tab)
+Workshop 5 · Thursday 26 February 2026
+Demystifying OpenClaw, the New AI Everyone's Talking About
+View the slides for workshop 5 (opens in a new tab)
+Event details for workshop 5
+Source on GitHub for workshop 5 (opens in a new tab)
+Workshop 4 · Monday 8 December 2025
+Make Your Own Private Alternative to GPT Atlas
+View the slides for workshop 4 (opens in a new tab)
+Event details for workshop 4
+Source on GitHub for workshop 4 (opens in a new tab)
+Workshop 3 · Wednesday 5 November 2025
+Make Your Own Local-First AI Assistant
+View the slides for workshop 3 (opens in a new tab)
+Event details for workshop 3
+Source on GitHub for workshop 3 (opens in a new tab)
+Workshop 2 · Wednesday 27 August 2025
+Creating your First Local AI Agent
+View the slides for workshop 2 (opens in a new tab)
+Event details for workshop 2
+Source on GitHub for workshop 2 (opens in a new tab)
+Workshop 1 · Wednesday 23 July 2025
+Beginners Guide to Private LLMs
+View the slides for workshop 1 (opens in a new tab)
+Event details for workshop 1
+Source on GitHub for workshop 1 (opens in a new tab)
+Discord (opens in a new tab)
+Luma (opens in a new tab)
+Meetup (opens in a new tab)
+GitHub (opens in a new tab)
+About Us
+Contribute to this website (opens in a new tab)
+Code of conduct (opens in a new tab)
+Privacy
+© 2026 freeCodeCamp London. A community group in the freeCodeCamp family.
+Proudly sponsored by CAJOGOS (opens in a new tab) 🚀

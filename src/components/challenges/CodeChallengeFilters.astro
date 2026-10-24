@@ -1,0 +1,159 @@
+---
+// Filter bar for the coding challenges. It starts hidden and the inline script
+// below shows it, so without JavaScript every card simply stays visible.
+import { kataRanks, katas } from "../../data/codewars";
+
+const TAGS = [
+    { value: "arrays", label: "Arrays" },
+    { value: "strings", label: "Strings" },
+    { value: "algorithms", label: "Algorithms" },
+    { value: "mathematics", label: "Maths" },
+];
+const control =
+    "inline-flex min-h-11 items-center rounded-md border border-border px-3";
+---
+
+<form
+    id="kata-filters"
+    class="mt-8 rounded-lg border border-border bg-surface p-4 sm:p-5"
+    aria-label="Filter challenges"
+    hidden
+>
+    <div class="flex flex-col gap-4">
+        <div>
+            <label for="kata-search" class="block font-bold">
+                Search by title
+            </label>
+            <input
+                id="kata-search"
+                type="search"
+                autocomplete="off"
+                class="mt-2 min-h-11 w-full rounded-md border border-border bg-bg px-3 text-text sm:max-w-sm"
+            />
+        </div>
+        <fieldset>
+            <legend class="font-bold">Rank</legend>
+            <div class="mt-2 flex flex-wrap gap-2">
+                {kataRanks.map((rank) => (
+                    <label class={`${control} cursor-pointer gap-2`}>
+                        <input
+                            type="checkbox"
+                            name="rank"
+                            value={rank}
+                            class="h-5 w-5 accent-current"
+                        />
+                        {rank} kyu
+                    </label>
+                ))}
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend class="font-bold">Topic</legend>
+            <div class="mt-2 flex flex-wrap gap-2">
+                {TAGS.map((tag) => (
+                    <button
+                        type="button"
+                        class={`${control} aria-pressed:border-link aria-pressed:bg-link aria-pressed:text-bg`}
+                        aria-pressed="false"
+                        data-tag={tag.value}
+                    >
+                        {tag.label}
+                    </button>
+                ))}
+            </div>
+        </fieldset>
+        <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
+            <button
+                id="kata-clear"
+                type="button"
+                class={`${control} font-semibold text-link`}
+            >
+                Clear filters
+            </button>
+            <p id="kata-status" class="text-muted" role="status">
+                {katas.length} challenges shown
+            </p>
+        </div>
+    </div>
+</form>
+
+<script is:inline>
+    (() => {
+        const form = document.getElementById("kata-filters");
+        if (!form) {
+            return;
+        }
+        const cards = [...document.querySelectorAll("[data-kata]")];
+        const sections = [...document.querySelectorAll("[data-rank-section]")];
+        const search = form.querySelector("#kata-search");
+        const ranks = [...form.querySelectorAll('input[name="rank"]')];
+        const tags = [...form.querySelectorAll("[data-tag]")];
+        const status = document.getElementById("kata-status");
+
+        function apply() {
+            const wantedRanks = ranks.filter((box) => box.checked);
+            const wantedTags = tags
+                .filter(
+                    (button) => button.getAttribute("aria-pressed") === "true",
+                )
+                .map((button) => button.dataset.tag);
+            const term = search.value.trim().toLowerCase();
+            let shown = 0;
+
+            cards.forEach((card) => {
+                const cardTags = card.dataset.tags.split("|");
+                const title = card
+                    .querySelector("h3")
+                    .textContent.toLowerCase();
+                const match =
+                    (wantedRanks.length === 0 ||
+                        wantedRanks.some(
+                            (box) => box.value === card.dataset.rank,
+                        )) &&
+                    (wantedTags.length === 0 ||
+                        wantedTags.some((tag) => cardTags.includes(tag))) &&
+                    title.includes(term);
+                card.hidden = !match;
+                shown += match ? 1 : 0;
+            });
+
+            sections.forEach((section) => {
+                const count = section.querySelectorAll(
+                    "[data-kata]:not([hidden])",
+                ).length;
+                section.querySelector("[data-count]").textContent =
+                    `(${count})`;
+                section.hidden = count === 0;
+            });
+
+            status.textContent =
+                shown === 0
+                    ? "No challenges match these filters"
+                    : `${shown} ${shown === 1 ? "challenge" : "challenges"} shown`;
+        }
+
+        form.addEventListener("input", apply);
+        form.addEventListener("change", apply);
+        form.addEventListener("submit", (event) => event.preventDefault());
+        document.getElementById("kata-clear").addEventListener("click", () => {
+            search.value = "";
+            ranks.forEach((box) => {
+                box.checked = false;
+            });
+            tags.forEach((button) =>
+                button.setAttribute("aria-pressed", "false"),
+            );
+            apply();
+        });
+        tags.forEach((button) => {
+            button.addEventListener("click", () => {
+                const pressed = button.getAttribute("aria-pressed") === "true";
+                button.setAttribute("aria-pressed", String(!pressed));
+                apply();
+            });
+        });
+
+        form.hidden = false;
+        apply();
+    })();
+</script>
