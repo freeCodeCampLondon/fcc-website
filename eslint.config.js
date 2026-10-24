@@ -5,15 +5,26 @@ import eslintPluginAstro from "eslint-plugin-astro";
 
 export default [
     {
-        files: ["**/*.{js,ts,tsx,astro}"],
+        files: ["**/*.{js,mjs,ts,tsx,astro}"],
     },
     {
-        ignores: ["src/env.d.ts", "./prettier.config.js"],
+        ignores: ["dist/", ".astro/"],
     },
     {
         languageOptions: { globals: globals.browser },
     },
+    {
+        files: [
+            "tests/**/*.ts",
+            "e2e/**/*.ts",
+            "scripts/**/*.mjs",
+            "vitest.config.ts",
+            "playwright.config.ts",
+        ],
+        languageOptions: { globals: globals.node },
+    },
     pluginJs.configs.recommended,
     ...tseslint.configs.recommended,
     ...eslintPluginAstro.configs.recommended,
+    ...eslintPluginAstro.configs["jsx-a11y-strict"],
 ];
