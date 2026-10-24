@@ -1,0 +1,196 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import JsonLd from "../../components/JsonLd.astro";
+import Icon from "../../components/Icon.astro";
+import {
+    deckForEvent,
+    isAiWorkshopEvent,
+} from "../../data/resources/ai-workshops";
+import EventFreshness from "../../components/events/EventFreshness.astro";
+import RegisterButton from "../../components/events/RegisterButton.astro";
+import {
+    PROVIDER_LABELS,
+    formatEventDate,
+    eventDescription,
+    formatEventTimes,
+    type EventData,
+} from "../../lib/events";
+
+export const getStaticPaths = (async () => {
+    const events = await getCollection("events");
+    return events.map(({ id, data }) => ({
+        params: { id },
+        props: { event: data },
+    }));
+}) satisfies GetStaticPaths;
+
+interface Props {
+    event: EventData;
+}
+
+const { event } = Astro.props;
+const hasEnded = event.end <= new Date();
+const deck = deckForEvent(Astro.params.id);
+const isAiWorkshop = Boolean(deck) || isAiWorkshopEvent(event.title);
+const end = event.end.toISOString();
+
+const EVENT_STATUS = {
+    scheduled: "https://schema.org/EventScheduled",
+    cancelled: "https://schema.org/EventCancelled",
+    postponed: "https://schema.org/EventPostponed",
+};
+
+// Google Event structured data needs a page per event and a venue address.
+const jsonLd = event.venue?.address && {
+    "@type": "Event",
+    name: event.title,
+    ...(event.summary && { description: event.summary }),
+    startDate: event.start.toISOString(),
+    endDate: end,
+    eventStatus: EVENT_STATUS[event.status],
+    eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+    location: {
+        "@type": "Place",
+        name: event.venue.name,
+        address: {
+            "@type": "PostalAddress",
+            streetAddress: event.venue.address,
+            addressCountry: "GB",
+        },
+    },
+    offers: {
+        "@type": "Offer",
+        price: 0,
+        priceCurrency: "GBP",
+        availability: "https://schema.org/InStock",
+        url: event.url,
+    },
+    organizer: {
+        "@type": "Organization",
+        name: "freeCodeCamp London",
+        url: "https://freecodecamp.london/",
+    },
+};
+---
+
+<Layout title={event.title} description={eventDescription(event)}>
+    {jsonLd && <JsonLd slot="head" data={jsonLd} />}
+    <article class="max-w-prose">
+        <p>
+            <a href="/events/">All events</a>
+        </p>
+        <h1 class="mt-4 text-3xl font-extrabold break-words sm:text-4xl">
+            {event.title}
+        </h1>
+
+        {event.status === "cancelled" && (
+            <p class="mt-4 font-bold text-accent">
+                Cancelled: this event will not take place.
+            </p>
+        )}
+        {event.status === "postponed" && (
+            <p class="mt-4 font-bold text-accent">
+                Postponed: check the event page on{" "}
+                {PROVIDER_LABELS[event.provider]} for the new date.
+            </p>
+        )}
+
+        <dl class="mt-6 grid grid-cols-[auto_1fr] gap-x-4 gap-y-2">
+            <dt class="flex items-center gap-2 font-bold">
+                <Icon name="calendar" class="size-5 text-muted" />
+                Date
+            </dt>
+            <dd>{formatEventDate(event.start)}</dd>
+            <dt class="flex items-center gap-2 font-bold">
+                <Icon name="clock" class="size-5 text-muted" />
+                Time
+            </dt>
+            <dd>{formatEventTimes(event)} (London time)</dd>
+            {event.venue && (
+                <>
+                    <dt class="flex items-center gap-2 font-bold">
+                        <Icon name="map-pin" class="size-5 text-muted" />
+                        Venue
+                    </dt>
+                    <dd>
+                        {event.venue.name}
+                        {event.venue.address && (
+                            <>
+                                <br />
+                                {event.venue.address}
+                            </>
+                        )}
+                        {event.venue.mapUrl && (
+                            <>
+                                <br />
+                                <a
+                                    class="inline-block py-1"
+                                    href={event.venue.mapUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Map
+                                </a>
+                            </>
+                        )}
+                    </dd>
+                </>
+            )}
+        </dl>
+
+        {event.summary && <p class="mt-6">{event.summary}</p>}
+
+        <div class="mt-6">
+            {event.status !== "cancelled" && !hasEnded && (
+                <RegisterButton event={event} campaign="event-page" />
+            )}
+            {event.status !== "cancelled" && (
+                <p data-event-ended={end} hidden={!hasEnded}>
+                    This event has ended.
+                    {event.provider !== "other" && (
+                        <>
+                            {" "}
+                            <a
+                                href={event.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                View it on {PROVIDER_LABELS[event.provider]}
+                            </a>
+                        </>
+                    )}
+                </p>
+            )}
+            {isAiWorkshop && (
+                <ul class="mt-4 flex flex-wrap gap-x-6 gap-y-1">
+                    {deck && (
+                        <li>
+                            <a
+                                class="inline-block py-2 font-bold"
+                                href={deck.slidesUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Workshop slides
+                                <span class="sr-only">
+                                    (password protected, opens in a new tab)
+                                </span>
+                            </a>
+                        </li>
+                    )}
+                    <li>
+                        <a
+                            class="inline-block py-2"
+                            href="/resources/ai-workshops/"
+                        >
+                            All AI workshop slides
+                        </a>
+                    </li>
+                </ul>
+            )}
+        </div>
+    </article>
+    <EventFreshness />
+</Layout>

@@ -1,0 +1,25 @@
+---
+import {
+    PROVIDER_LABELS,
+    registrationLink,
+    type EventData,
+} from "../../lib/events";
+
+interface Props {
+    event: EventData;
+    /** utm_campaign value: "home", "events" or "event-page" */
+    campaign: string;
+}
+
+const { event, campaign } = Astro.props;
+---
+
+<a
+    class="inline-block rounded-md bg-cta px-4 py-2 font-bold text-cta-text no-underline transition-opacity hover:opacity-90"
+    href={registrationLink(event, campaign)}
+    data-event-end={event.end.toISOString()}
+    target="_blank"
+    rel="noopener noreferrer"
+>
+    Register on {PROVIDER_LABELS[event.provider]}
+</a>

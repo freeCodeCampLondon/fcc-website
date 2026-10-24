@@ -1,0 +1,140 @@
+[
+  {
+    "id": "2025-02-18-freecodecamp-meetup",
+    "title": "freeCodeCamp Meetup",
+    "summary": "Join us to solve codewars puzzles together!",
+    "start": "2025-02-18T18:00:00+00:00",
+    "end": "2025-02-18T21:00:00+00:00",
+    "venue": {
+      "name": "Wimbletech"
+    },
+    "provider": "other",
+    "url": "https://luma.com/freecodecamp.london"
+  },
+  {
+    "id": "2025-03-18-freecodecamp-meetup",
+    "title": "freeCodeCamp Meetup",
+    "summary": "Contribute to the FCC London page on Astro!",
+    "start": "2025-03-18T18:00:00+00:00",
+    "end": "2025-03-18T21:00:00+00:00",
+    "venue": {
+      "name": "Wimbletech"
+    },
+    "provider": "other",
+    "url": "https://luma.com/freecodecamp.london"
+  },
+  {
+    "id": "2025-04-22-freecodecamp-meetup",
+    "title": "freeCodeCamp Meetup",
+    "summary": "Bring a laptop and your enthusiasm!",
+    "start": "2025-04-22T18:00:00+01:00",
+    "end": "2025-04-22T21:00:00+01:00",
+    "venue": {
+      "name": "Wimbletech"
+    },
+    "provider": "other",
+    "url": "https://luma.com/freecodecamp.london"
+  },
+  {
+    "id": "2025-07-23-ai-edition-beginners-guide-to-private",
+    "sourceId": "luma:evt-jWTIkunJMsmuSk3",
+    "title": "freeCodeCamp | AI Edition - Beginners Guide to Private LLMs",
+    "start": "2025-07-23T18:00:00+01:00",
+    "end": "2025-07-23T21:00:00+01:00",
+    "provider": "luma",
+    "url": "https://luma.com/rdig4h1t"
+  },
+  {
+    "id": "2025-08-27-ai-edition-creating-your-first-local",
+    "sourceId": "luma:evt-XmatiG6vuy5lika",
+    "title": "freeCodeCamp | AI Edition - Creating your First Local AI Agent",
+    "start": "2025-08-27T18:00:00+01:00",
+    "end": "2025-08-27T21:00:00+01:00",
+    "provider": "luma",
+    "url": "https://luma.com/ddn4jips"
+  },
+  {
+    "id": "2025-11-05-ai-edition-make-your-own-local",
+    "sourceId": "luma:evt-PXKA7apEbTS7mLP",
+    "title": "freeCodeCamp x Encode | AI Edition - Make Your Own Local-First AI Assistant",
+    "start": "2025-11-05T18:00:00+00:00",
+    "end": "2025-11-05T21:00:00+00:00",
+    "venue": {
+      "name": "Encode Hub",
+      "address": "41 Pitfield St, London N1 6DA, UK",
+      "mapUrl": "https://www.openstreetmap.org/?mlat=51.527586&mlon=-0.083770#map=18/51.527586/-0.083770"
+    },
+    "provider": "luma",
+    "url": "https://luma.com/juy7t6rl"
+  },
+  {
+    "id": "2025-12-08-ai-workshop-make-your-own-private",
+    "sourceId": "luma:evt-1ClXgEFi7pnasos",
+    "title": "freeCodeCamp x Encode | AI - Workshop: Make Your Own Private Alternative to GPT Atlas",
+    "start": "2025-12-08T18:00:00+00:00",
+    "end": "2025-12-08T21:00:00+00:00",
+    "venue": {
+      "name": "Encode Hub",
+      "address": "41 Pitfield St, London N1 6DA, UK",
+      "mapUrl": "https://www.openstreetmap.org/?mlat=51.527586&mlon=-0.083770#map=18/51.527586/-0.083770"
+    },
+    "provider": "luma",
+    "url": "https://luma.com/bl963x11"
+  },
+  {
+    "id": "2026-02-26-ai-workshop-demystifying-openclaw-the-new",
+    "sourceId": "luma:evt-3jQlyu5INVxPv2i",
+    "title": "freeCodeCamp x Encode | AI - Workshop: Demystifying OpenClaw, the New AI Everyone's Talking About",
+    "start": "2026-02-26T18:00:00+00:00",
+    "end": "2026-02-26T21:00:00+00:00",
+    "venue": {
+      "name": "Encode Hub",
+      "address": "41 Pitfield St, London N1 6DA, UK",
+      "mapUrl": "https://www.openstreetmap.org/?mlat=51.527586&mlon=-0.083770#map=18/51.527586/-0.083770"
+    },
+    "provider": "luma",
+    "url": "https://luma.com/wy7xdrca"
+  },
+  {
+    "id": "2026-03-25-ai-workshop-breaking-down-openclaw-from",
+    "sourceId": "luma:evt-PePsc9hs3CDJT4i",
+    "title": "freeCodeCamp x Encode | AI - Workshop: Breaking Down OpenClaw (From Minimal Mode to Advanced Mode w/ Skills)",
+    "start": "2026-03-25T18:00:00+00:00",
+    "end": "2026-03-25T21:30:00+00:00",
+    "venue": {
+      "name": "Encode Hub",
+      "address": "41 Pitfield St, London N1 6DA, UK",
+      "mapUrl": "https://www.openstreetmap.org/?mlat=51.527586&mlon=-0.083770#map=18/51.527586/-0.083770"
+    },
+    "provider": "luma",
+    "url": "https://luma.com/it7a6h53"
+  },
+  {
+    "id": "2026-06-11-ai-workshop-vibecoding-using-local-ais",
+    "sourceId": "luma:evt-d8qnr7c8X7N1Hup",
+    "title": "freeCodeCamp x Encode | AI - Workshop: Vibecoding Using Local AIs",
+    "start": "2026-06-11T18:00:00+01:00",
+    "end": "2026-06-11T21:30:00+01:00",
+    "venue": {
+      "name": "Encode Hub",
+      "address": "41 Pitfield St, London N1 6DA, UK",
+      "mapUrl": "https://www.openstreetmap.org/?mlat=51.527586&mlon=-0.083770#map=18/51.527586/-0.083770"
+    },
+    "provider": "luma",
+    "url": "https://luma.com/11txn8gq"
+  },
+  {
+    "id": "2026-08-19-ai-workshop-hermes-agent-w-your",
+    "sourceId": "luma:evt-YH2wzaFok65vcBx",
+    "title": "freeCodeCamp x Encode | AI - Workshop: Hermes Agent w/ your Local LLM models such as Qwen, Deepseek, etc",
+    "start": "2026-08-19T17:45:00+01:00",
+    "end": "2026-08-19T21:15:00+01:00",
+    "venue": {
+      "name": "Encode Hub",
+      "address": "41 Pitfield St, London N1 6DA, UK",
+      "mapUrl": "https://www.openstreetmap.org/?mlat=51.527586&mlon=-0.083770#map=18/51.527586/-0.083770"
+    },
+    "provider": "luma",
+    "url": "https://luma.com/axzt5ade"
+  }
+]
