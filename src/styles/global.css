@@ -1,0 +1,309 @@
+@import "tailwindcss";
+
+/* Dark is the default theme; [data-theme="light"] switches the tokens. */
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+/*
+  London palette: night navy, park green, sky blue and bus red. Every text
+  and UI pairing passes WCAG AA in both themes (tests/contrast.test.ts).
+*/
+:root,
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0d1321; /* night navy */
+  --surface: #182235;
+  --border: #5b6b86;
+  --text: #f4f6fa;
+  --muted: #c2cad8;
+  --link: #5ee39a; /* park green */
+  --accent: #ff7a6e; /* bus red, lightened for contrast */
+  --cta-bg: #22c55e;
+  --cta-text: #0d1321;
+  --brand-from: #5ee39a;
+  --brand-via: #7cb8ff; /* sky blue */
+  --brand-to: #ff7a6e;
+  /* CodeWars rank badges (white, yellow, blue, purple), with --kyu-text on top */
+  --kyu-white: #e6e9ef;
+  --kyu-yellow: #f2d46b;
+  --kyu-blue: #8ec5ff;
+  --kyu-purple: #c8a8ff;
+  --kyu-text: #0d1321;
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+  --bg: #ffffff;
+  --surface: #f2f5f9;
+  --border: #7a879c;
+  --text: #0d1321;
+  --muted: #3b4659;
+  --link: #0b6b3a; /* dark park green */
+  --accent: #b4231a; /* bus red */
+  --cta-bg: #15803d;
+  --cta-text: #ffffff;
+  --brand-from: #0b6b3a;
+  --brand-via: #1d4ed8;
+  --brand-to: #b4231a;
+  --kyu-white: #e3e7ee;
+  --kyu-yellow: #fbe38e;
+  --kyu-blue: #c7ddff;
+  --kyu-purple: #e6d6ff;
+  --kyu-text: #0d1321;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-link: var(--link);
+  --color-accent: var(--accent);
+  --color-cta: var(--cta-bg);
+  --color-cta-text: var(--cta-text);
+  --color-brand-from: var(--brand-from);
+  --color-brand-via: var(--brand-via);
+  --color-brand-to: var(--brand-to);
+  --color-kyu-white: var(--kyu-white);
+  --color-kyu-yellow: var(--kyu-yellow);
+  --color-kyu-blue: var(--kyu-blue);
+  --color-kyu-purple: var(--kyu-purple);
+  --color-kyu-text: var(--kyu-text);
+  --font-sans: var(--font-lato), system-ui, sans-serif;
+}
+
+/* Global element styles stay in @layer base so Tailwind utilities override them. */
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--border);
+  }
+
+  html {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-sans);
+  }
+
+  a {
+    color: var(--link);
+  }
+
+  img,
+  svg,
+  video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  h1,
+  h2,
+  h3 {
+    overflow-wrap: anywhere;
+  }
+
+  code {
+    font-family:
+      ui-monospace, Menlo, Monaco, "Lucida Console", "Liberation Mono",
+      "DejaVu Sans Mono", "Courier New", monospace;
+  }
+}
+
+/* Markdown blog posts (src/pages/blog/[...slug].astro) */
+@layer components {
+  .post-content > * + * {
+    margin-top: 1rem;
+  }
+
+  .post-content h2 {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .post-content h3 {
+    margin-top: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  .post-content ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+  }
+
+  .post-content ol {
+    list-style: decimal;
+    padding-left: 1.5rem;
+  }
+
+  .post-content li + li {
+    margin-top: 0.5rem;
+  }
+
+  .post-content blockquote {
+    border-left: 4px solid var(--border);
+    padding-left: 1rem;
+    color: var(--muted);
+  }
+
+  .post-content code {
+    overflow-wrap: anywhere;
+    border-radius: 0.25rem;
+    background: var(--surface);
+    padding: 0.1rem 0.3rem;
+  }
+
+  .post-content pre {
+    overflow-x: auto;
+    border-radius: 0.5rem;
+    background: var(--surface);
+    padding: 1rem;
+  }
+
+  .post-content pre code {
+    padding: 0;
+  }
+
+  .post-content img {
+    border-radius: 0.5rem;
+  }
+
+  .post-content table {
+    display: block;
+    overflow-x: auto;
+    border-collapse: collapse;
+  }
+
+  .post-content th,
+  .post-content td {
+    border: 1px solid var(--border);
+    padding: 0.4rem 0.6rem;
+  }
+}
+
+/*
+  Home page hero (src/components/home/Hero.astro): a night sky fading to
+  the surface colour behind the "London at night" canvas
+  (src/scripts/london-background.ts), which reads the same tokens.
+*/
+@layer components {
+  .hero {
+    background: linear-gradient(
+      to bottom,
+      var(--bg) 0%,
+      var(--bg) 30%,
+      var(--surface) 100%
+    );
+  }
+
+  .hero-canvas {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  /* Click counter easter egg (src/scripts/click-counter.ts) */
+  .hero-floaters {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .hero-count {
+    position: absolute;
+    translate: -50% -50%;
+    font-family: ui-monospace, Menlo, Monaco, Consolas, monospace;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--text);
+    animation: hero-count-float 1.2s ease-out forwards;
+  }
+
+  .hero-milestone {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    max-width: calc(100% - 2rem);
+    padding: 0.25rem 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    font-family: var(--font-sans);
+    font-size: clamp(1.125rem, 5vw, 2rem);
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    color: transparent;
+    background-image:
+      linear-gradient(
+        90deg,
+        var(--brand-from),
+        var(--brand-via),
+        var(--brand-to)
+      ),
+      linear-gradient(var(--bg), var(--bg));
+    background-clip: text, padding-box;
+    -webkit-background-clip: text, padding-box;
+    translate: -50% -50%;
+    animation: hero-milestone-pop 2.6s ease-out forwards;
+  }
+
+  @keyframes hero-count-float {
+    from {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+    to {
+      opacity: 0;
+      transform: translate(var(--drift, 0), -4rem);
+    }
+  }
+
+  @keyframes hero-milestone-pop {
+    0% {
+      opacity: 0;
+      transform: scale(0.6);
+    }
+    12% {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+    20%,
+    80% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes hero-fade {
+    0%,
+    70% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-count {
+      animation: hero-fade 1.2s linear forwards;
+    }
+
+    .hero-milestone {
+      animation: hero-fade 2.6s linear forwards;
+    }
+  }
+}
