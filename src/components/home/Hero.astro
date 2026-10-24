@@ -1,0 +1,78 @@
+---
+import { hero } from "../../data/home";
+---
+
+<section
+    class="hero relative isolate overflow-hidden rounded-2xl border border-border"
+    aria-labelledby="home-heading"
+    data-hero
+>
+    <canvas class="hero-canvas" aria-hidden="true"></canvas>
+    <div class="hero-floaters" aria-hidden="true"></div>
+    <p class="sr-only" aria-live="polite" data-hero-live></p>
+    <div class="flex min-h-[min(70vh,40rem)] flex-col items-center justify-center px-4 pt-10 pb-40">
+        <h1
+            id="home-heading"
+            class="hero-wordmark text-center text-[clamp(2.25rem,9vw,3.75rem)] leading-tight font-bold text-text"
+        >
+            freeCodeCamp{" "}
+            <span class="bg-linear-to-r from-brand-from via-brand-via to-brand-to bg-clip-text text-transparent inline-block">
+                London
+            </span>
+        </h1>
+        <p class="mt-4 max-w-prose text-center text-lg text-muted">
+            {hero.tagline}
+        </p>
+        <div class="mt-8 flex w-full flex-col items-center justify-center gap-4 sm:flex-row">
+            <a
+                class="w-full max-w-76 rounded-md bg-cta px-4 py-3 text-center text-lg font-bold text-cta-text no-underline transition-opacity hover:opacity-90 sm:w-auto"
+                href={hero.primary.href}
+            >
+                {hero.primary.label}
+            </a>
+            <a
+                class="w-full max-w-76 rounded-md border-2 border-cta bg-bg px-4 py-2.5 text-center text-lg font-bold text-link no-underline transition-colors hover:bg-surface sm:w-auto"
+                href={hero.secondary.href}
+            >
+                {hero.secondary.label}
+            </a>
+        </div>
+    </div>
+</section>
+
+<script>
+    import { startLondonBackground } from "../../scripts/london-background";
+    import { startClickCounter } from "../../scripts/click-counter";
+
+    // Effects start after the page has loaded and the browser is idle, so
+    // they never compete with the first paint or the largest content.
+    function whenIdle(task: () => void): void {
+        const later = () => {
+            if (typeof window.requestIdleCallback === "function") {
+                window.requestIdleCallback(task, { timeout: 1500 });
+            } else {
+                setTimeout(task, 200);
+            }
+        };
+        if (document.readyState === "complete") {
+            later();
+        } else {
+            window.addEventListener("load", later, { once: true });
+        }
+    }
+
+    const hero = document.querySelector<HTMLElement>("[data-hero]");
+    const canvas = hero?.querySelector<HTMLCanvasElement>(".hero-canvas");
+    const floaters = hero?.querySelector<HTMLElement>(".hero-floaters");
+    if (hero && canvas) {
+        whenIdle(() => startLondonBackground(hero, canvas));
+    }
+    // The click counter is only a listener, so it starts straight away
+    if (hero && floaters) {
+        startClickCounter(
+            hero,
+            floaters,
+            hero.querySelector<HTMLElement>("[data-hero-live]"),
+        );
+    }
+</script>
