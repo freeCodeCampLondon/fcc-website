@@ -1,0 +1,24 @@
+name: Rebuild site
+# Cloudflare Pages builds the site from main; the build reads the Luma
+# Calendar feed. Run this workflow by hand (Actions > Rebuild site > Run
+# workflow) after adding an event on Luma, to publish it without a code change.
+# The deploy hook URL is a repository secret (Cloudflare Pages > Settings >
+# Builds > Deploy hooks).
+on:
+    workflow_dispatch:
+permissions: {}
+jobs:
+    rebuild:
+        name: Trigger Cloudflare Pages deploy hook
+        runs-on: ubuntu-latest
+        timeout-minutes: 5
+        steps:
+            - name: Call deploy hook
+              env:
+                  HOOK: ${{ secrets.CLOUDFLARE_PAGES_DEPLOY_HOOK }}
+              run: |
+                  if [ -z "$HOOK" ]; then
+                      echo "::notice::CLOUDFLARE_PAGES_DEPLOY_HOOK is not set; skipping the rebuild."
+                      exit 0
+                  fi
+                  curl -fsS -X POST "$HOOK"

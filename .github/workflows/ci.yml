@@ -1,0 +1,44 @@
+name: CI
+on:
+    pull_request:
+    push:
+        branches: [main]
+    workflow_dispatch:
+permissions:
+    contents: read
+concurrency:
+    group: ci-${{ github.ref }}
+    cancel-in-progress: true
+jobs:
+    checks:
+        name: Lint, format, type-check and test
+        runs-on: ubuntu-latest
+        timeout-minutes: 15
+        steps:
+            - uses: actions/checkout@v7
+            - uses: actions/setup-node@v7
+              with:
+                  node-version-file: .nvmrc
+                  cache: npm
+            - run: npm ci
+            - name: ESLint
+              run: npm run lint
+            - name: Prettier
+              run: npm run format
+            - name: Type-check
+              run: npx astro check
+            - name: Build and test
+              run: npm test
+            - name: Install Playwright Chromium
+              run: npx playwright install --with-deps chromium
+            - name: Browser tests (responsive layout)
+              run: npm run test:e2e
+            - name: Upload build output and browser test report on failure
+              if: failure()
+              uses: actions/upload-artifact@v7
+              with:
+                  name: dist-and-report
+                  path: |
+                      dist/
+                      playwright-report/
+                  retention-days: 3

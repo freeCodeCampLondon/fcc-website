@@ -1,0 +1,34 @@
+version: 2
+updates:
+    - package-ecosystem: npm
+      directory: /
+      schedule:
+          interval: weekly
+      open-pull-requests-limit: 5
+      ignore:
+          # Astro majors are planned upgrades (see docs/plan), not routine bumps
+          - dependency-name: astro
+            update-types: ["version-update:semver-major"]
+      groups:
+          astro:
+              patterns: ["astro", "@astrojs/*"]
+          lint-format:
+              patterns:
+                  [
+                      "eslint",
+                      "eslint-*",
+                      "@eslint/*",
+                      "typescript-eslint",
+                      "@typescript-eslint/*",
+                      "prettier",
+                      "prettier-*",
+                      "globals",
+                  ]
+          test:
+              patterns: ["vitest", "happy-dom", "@playwright/test"]
+          tailwind:
+              patterns: ["tailwindcss", "@tailwindcss/*"]
+    - package-ecosystem: github-actions
+      directory: /
+      schedule:
+          interval: monthly
