@@ -1,0 +1,57 @@
+About us | freeCodeCamp London
+Skip to content freeCodeCamp London About Us
+Coding Challenges
+Blog
+Events
+Light theme
+About Us
+Coding Challenges
+Blog
+Events
+About us
+freeCodeCamp London is a friendly community of people learning to code in London, from complete beginners to experienced developers.
+We meet up to learn together, help each other out and share what we are building. Our events are free, relaxed and open to everyone, whatever your background or experience.
+What is freeCodeCamp?
+freeCodeCamp is a nonprofit that offers a free, self-paced coding curriculum with interactive lessons, projects and certifications, used by millions of learners around the world.
+freeCodeCamp London is a local community group in the freeCodeCamp family, so you can learn alongside people in your city as well as online.
+Start learning on freeCodeCamp.org
+What happens at a meetup
+The format varies by event, so check the event page for what is planned. Most meetups include some of these:
+Workshops and talks
+Some events have a hands-on workshop or a short talk on a tool, language or topic, followed by time to try it out and ask questions.
+Coding together and getting help
+Bring whatever you are working on, a freeCodeCamp lesson, a personal project or a coding challenge, and work on it with others. Stuck? Someone is usually happy to take a look.
+Show and tell
+Members share projects, recent learnings or anything coding related. It is a great way to get feedback and see what others are building. Want to present? Let us know on Discord.
+Venues vary across London; each event page shows the venue and how to sign up.
+Code of conduct
+We want every meetup to be friendly, safe and welcoming for everyone. We follow the freeCodeCamp code of conduct at our events and in our online spaces. If something makes you uncomfortable, please tell one of the organisers at the event or message us on Discord.
+Get involved
+Join us on Discord (opens in a new tab) Chat with members, ask questions and share resources between events.
+Follow us on Luma (opens in a new tab) See upcoming events and register for the next meetup.
+Join our Meetup group (opens in a new tab) Our long-running community group on Meetup, with thousands of members across London.
+Contribute to this website (opens in a new tab) The site is open source and a good place to make your first pull request.
+Frequently asked questions
+Who Can Join?
+Our meetups are open to all ages and skill levels. If you’re under 18, just bring an adult along.
+What Should I Bring?
+Bringing a laptop is helpful, but not required. You can still participate and enjoy the event even without one.
+When and Where?
+We meet up regularly in London. Venues vary, so check each event on our events page for the place and time.
+Cost
+There’s no fee to attend, though some venues require you to register in advance. Be sure to check each event's details to ensure you’re signed up properly.
+How to Connect
+Our events are now listed on this site and on our Luma calendar, where you can register. For chat, join our Discord server, where members exchange ideas, share resources and connect.
+Privacy
+This website uses Cloudflare Web Analytics to count visits and see which pages are useful. It does not use cookies, does not track you across other websites and does not collect personal data. We do not use any other analytics or tracking.
+See Cloudflare's privacy policy for details. Links to Discord, Luma, GitHub and freeCodeCamp take you to services with their own privacy policies.
+Discord (opens in a new tab)
+Luma (opens in a new tab)
+Meetup (opens in a new tab)
+GitHub (opens in a new tab)
+About Us
+Contribute to this website (opens in a new tab)
+Code of conduct (opens in a new tab)
+Privacy
+© 2026 freeCodeCamp London. A community group in the freeCodeCamp family.
+Proudly sponsored by CAJOGOS (opens in a new tab) 🚀

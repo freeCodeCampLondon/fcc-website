@@ -1,0 +1,42 @@
+Hello World: our community blog is open | freeCodeCamp London
+Skip to content freeCodeCamp London About Us
+Coding Challenges
+Blog
+Events
+Light theme
+About Us
+Coding Challenges
+Blog
+Events
+All posts
+Hello World: our community blog is open
+By freeCodeCamp London on 24 October 2026
+Every programmer’s first program prints “Hello, World!”, so it felt like the right way to open our blog.
+This is a space for the freeCodeCamp London community: people who come to our meetups, people who are learning to code on their own and want company, and experienced developers who enjoy helping others get started.
+What we will publish
+Meetup recaps: what we built, what we learned, links to the slides and code.
+Tutorials: small, practical guides, from your first JavaScript function to running a language model on your own laptop.
+Learning stories: how you got into coding, what clicked, what did not, and what you would tell someone starting today.
+Community news: new events, venues, partners and projects.
+We are looking for authors
+You do not need to be an expert. A beginner explaining something they have just understood often writes the clearest guide there is. If you came to a meetup, finished a freeCodeCamp certification, solved a tricky kata or built something you are proud of, we would love to read about it.
+How to submit a post
+Posts are Markdown files in this website’s repository, and you send them as a pull request on GitHub. It is good practice for working on a real codebase, and the organisers are happy to help with your first one.
+Fork freeCodeCampLondon/fcc-website (opens in a new tab) on GitHub.
+Copy src/content/blog/_template.md to a new file named after your post, for example my-first-hackathon.md.
+Fill in the details at the top and write your post.
+Preview it with npm run dev, then open a pull request.
+The full steps, and what we check before publishing, are in CONTRIBUTING.md (opens in a new tab). If you get stuck, ask in our Discord (opens in a new tab).
+Thank you
+This blog was started by community member deej-tsn (opens in a new tab), who built its first version. We look forward to reading your posts.
+Questions or thoughts? Discuss it on Discord .
+Discord (opens in a new tab)
+Luma (opens in a new tab)
+Meetup (opens in a new tab)
+GitHub (opens in a new tab)
+About Us
+Contribute to this website (opens in a new tab)
+Code of conduct (opens in a new tab)
+Privacy
+© 2026 freeCodeCamp London. A community group in the freeCodeCamp family.
+Proudly sponsored by CAJOGOS (opens in a new tab) 🚀

@@ -1,0 +1,63 @@
+{
+  "id": "55a70521798b14d4750000a4",
+  "name": "Returning Strings",
+  "slug": "returning-strings",
+  "category": "reference",
+  "publishedAt": "2015-07-16T01:30:45.770Z",
+  "approvedAt": "2017-12-21T15:07:57.617Z",
+  "languages": [
+    "python",
+    "ruby",
+    "cpp",
+    "crystal",
+    "javascript",
+    "nasm",
+    "php",
+    "haskell",
+    "scala",
+    "csharp",
+    "typescript",
+    "lua",
+    "kotlin",
+    "rust",
+    "sql",
+    "shell",
+    "go",
+    "julia",
+    "java",
+    "groovy",
+    "coffeescript",
+    "swift",
+    "clojure",
+    "r",
+    "elixir",
+    "cobol",
+    "ocaml",
+    "dart"
+  ],
+  "url": "https://www.codewars.com/kata/55a70521798b14d4750000a4",
+  "rank": {
+    "id": -8,
+    "name": "8 kyu",
+    "color": "white"
+  },
+  "createdAt": "2015-07-16T01:13:05.763Z",
+  "createdBy": {
+    "username": "Aweson1",
+    "url": "https://www.codewars.com/users/Aweson1"
+  },
+  "approvedBy": {
+    "username": "GiacomoSorbi",
+    "url": "https://www.codewars.com/users/GiacomoSorbi"
+  },
+  "totalAttempts": 476442,
+  "totalCompleted": 273701,
+  "totalStars": 880,
+  "voteScore": 10884,
+  "tags": ["Strings", "Fundamentals"],
+  "contributorsWanted": true,
+  "unresolved": {
+    "issues": 0,
+    "suggestions": 1
+  }
+}
