@@ -1,32 +1,53 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { pageMeta } from "../data/pageMeta";
 import CodeChallenge from "../components/challenges/CodeChallenge.astro";
-import Navbar from "../components/Navbar.astro";
 ---
 
-<Layout title="freeCodeCamp London">
-    <Navbar />
-    <div class="w-full text-left">
-        <h2 class="m-5 text-4xl text-white bold">Coding Challenges:</h2>
-
-        <p class="m-5">
-            Hone your fundamental Javascript skills by having a go at
-            freeCodeCamp's <a
-                href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/"
-                target="_blank"
-                >JavaScript Algorithms and Data Structures certification</a
-            >.
-            <br /> You can also try the algorithms and data structures courses from
-            the
-            <a
-                href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures"
-                target="_blank">legacy curriculum</a
-            > for a different kind of challenge.
+<Layout {...pageMeta["/coding-challenges/"]}>
+    <div class="max-w-prose">
+        <h1 class="my-5 text-4xl text-text font-bold">Coding challenges</h1>
+        <p class="my-5">
+            Practise JavaScript with short puzzles from CodeWars, picked for our
+            meetups. Pair up with someone, start with the 8 kyu challenges and
+            talk through your solution as you go: explaining your thinking is
+            half the practice.
         </p>
-        <p class="m-5">
-            For a more gamified experience and a wider selection of challenges,
-            sign up to <a href="https://www.codewars.com">CodeWars</a>. <br /> We
-            have curated some coding challenges from CodeWars for you to try here:
+        <p class="my-5">
+            CodeWars ranks challenges in kyu: 8 kyu is the easiest, and the
+            number goes down as the challenges get harder. Create a free account
+            on{" "}
+            <a
+                href="https://www.codewars.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                CodeWars
+            </a>{" "}
+            to run your code against the tests and keep track of what you have
+            solved.
+        </p>
+        <p class="my-5">
+            Prefer a guided course? freeCodeCamp's
+            <a
+                href="https://www.freecodecamp.org/learn/javascript-v9/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                JavaScript curriculum
+                <span class="sr-only">(opens in a new tab)</span>
+            </a>
+            and
+            <a
+                href="https://www.freecodecamp.org/learn/full-stack-developer/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Full Stack Developer curriculum
+                <span class="sr-only">(opens in a new tab)</span>
+            </a>
+            teach the same skills step by step, with projects to build along the
+            way.
         </p>
     </div>
     <CodeChallenge />

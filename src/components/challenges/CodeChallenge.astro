@@ -1,16 +1,36 @@
 ---
-import { codeWarsChallenges } from "../../data/codewarsChallenges";
+import { kataRanks, katas } from "../../data/codewars";
 import CodeChallengeCard from "./CodeChallengeCard.astro";
+import CodeChallengeFilters from "./CodeChallengeFilters.astro";
+
+const LABELS: Record<number, string> = {
+    8: "start here",
+    7: "next steps",
+    6: "a step up",
+    5: "stretch goal",
+};
+const sections = kataRanks.map((rank) => ({
+    rank,
+    heading: LABELS[rank] ? `${rank} kyu: ${LABELS[rank]}` : `${rank} kyu`,
+    katas: katas.filter((kata) => kata.rank === rank),
+}));
 ---
 
-<div class="mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 w-4/5 gap-5">
-    {
-        codeWarsChallenges.map((challenge) => (
-            <CodeChallengeCard
-                title={challenge.title}
-                href={challenge.link}
-                difficulty="Beginner"
-            />
-        ))
-    }
-</div>
+<CodeChallengeFilters />
+
+{sections.map((section) => (
+    <section
+        class="mt-10"
+        aria-labelledby={`rank-${section.rank}`}
+        data-rank-section={section.rank}
+    >
+        <h2 id={`rank-${section.rank}`} class="mb-4 text-2xl font-bold">
+            {section.heading} <span data-count>({section.katas.length})</span>
+        </h2>
+        <ul class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {section.katas.map((kata) => (
+                <CodeChallengeCard kata={kata} />
+            ))}
+        </ul>
+    </section>
+))}
