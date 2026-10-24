@@ -1,0 +1,13 @@
+{
+  "name": "freeCodeCamp London",
+  "short_name": "fCC London",
+  "description": "Learn to code together in London. Free events, friendly people, everyone welcome whatever your background or experience.",
+  "start_url": "/",
+  "display": "browser",
+  "theme_color": "#0d1321",
+  "background_color": "#0d1321",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

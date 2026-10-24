@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://freecodecamp.london/sitemap-index.xml

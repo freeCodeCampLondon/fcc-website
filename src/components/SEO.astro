@@ -1,0 +1,72 @@
+---
+import {
+    SITE_NAME,
+    SITE_URL,
+    THEME_COLOR,
+    fullTitle,
+    ogImagePath,
+} from "../lib/seo";
+
+export interface Props {
+    /** Page title without the site name ("Events"); see fullTitle(). */
+    title: string;
+    /** 120 to 160 characters, shown in search results and link previews. */
+    description: string;
+    /**
+     * Social image path or URL (1200x630). Default: the card generated for
+     * this route by src/pages/og/[...route].ts.
+     */
+    image?: string;
+    /** Alt text for the social image. Default: the page title. */
+    imageAlt?: string;
+    type?: "website" | "article";
+    /** Keep the page out of search results (the 404 page). */
+    noindex?: boolean;
+}
+
+const {
+    title,
+    description,
+    image = ogImagePath(Astro.url.pathname),
+    imageAlt = title,
+    type = "website",
+    noindex = false,
+} = Astro.props;
+
+const site = Astro.site ?? new URL(SITE_URL);
+const pageUrl = new URL(Astro.url.pathname, site).href;
+const imageUrl = new URL(image, site).href;
+---
+
+<title>{fullTitle(title)}</title>
+<meta name="description" content={description} />
+{noindex ? (
+    <meta name="robots" content="noindex" />
+) : (
+    <link rel="canonical" href={pageUrl} />
+)}
+
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={pageUrl} />
+<meta property="og:type" content={type} />
+<meta property="og:site_name" content={SITE_NAME} />
+<meta property="og:locale" content="en_GB" />
+<meta property="og:image" content={imageUrl} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content={imageAlt} />
+<meta name="twitter:card" content="summary_large_image" />
+
+{/* Icons generated from favicon.svg by scripts/generate-icons.mjs */}
+<link rel="icon" href="/favicon.ico" sizes="32x32" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<link
+    rel="alternate"
+    type="application/rss+xml"
+    title="freeCodeCamp London blog"
+    href="/rss.xml"
+/>
+<meta name="theme-color" content={THEME_COLOR} />
