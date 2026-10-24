@@ -6,15 +6,15 @@ export type FAQ = {
 export const faqAnswer: FAQ[] = [
     {
         title: "Who Can Join?",
-        body: " Our meetups are open to all ages and skill levels. If you’re under 18, just bring an adult along.",
+        body: "Our meetups are open to all ages and skill levels. If you’re under 18, just bring an adult along.",
     },
     {
-        title: "What Should I Bring? ",
+        title: "What Should I Bring?",
         body: "Bringing a laptop is helpful, but not required. You can still participate and enjoy the event even without one.",
     },
     {
-        title: "When and Where? ",
-        body: "We usually meetup every month at Wimbletech in Wimbledon. However, our meetup locations may vary, so keep an eye on our Meetup group or the #meetups channel in Discord for the latest details.",
+        title: "When and Where?",
+        body: "We meet up regularly in London. Venues vary, so check each event on our events page for the place and time.",
     },
     {
         title: "Cost",
@@ -22,6 +22,6 @@ export const faqAnswer: FAQ[] = [
     },
     {
         title: "How to Connect",
-        body: "Join our Meetup group to stay updated on upcoming events, or join the conversation in our Discord group where members exchange ideas, share resources, and connect.",
+        body: "Our events are now listed on this site and on our Luma calendar, where you can register. For chat, join our Discord server, where members exchange ideas, share resources and connect.",
     },
 ];

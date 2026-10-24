@@ -3,7 +3,15 @@ import { faqAnswer } from "../../data/faq";
 import FAQCard from "./FAQCard.astro";
 ---
 
-<h1 class="text-4xl w-full mt-4">FAQs</h1>
-<ul>
-    {faqAnswer.map((faq) => <FAQCard title={faq.title} body={faq.body} />)}
-</ul>
+<section aria-labelledby="faq-heading" class="mt-12">
+    <h2 id="faq-heading" class="text-2xl font-extrabold">
+        Frequently asked questions
+    </h2>
+    <ul class="mt-4 flex flex-col gap-3">
+        {faqAnswer.map((faq) => (
+            <li>
+                <FAQCard title={faq.title} body={faq.body} />
+            </li>
+        ))}
+    </ul>
+</section>
