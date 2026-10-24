@@ -1,0 +1,105 @@
+---
+import Icon, { type IconName } from "./Icon.astro";
+
+const community = [
+    {
+        label: "Discord",
+        href: "https://discord.gg/hmVycPYAue",
+        icon: "discord",
+    },
+    {
+        label: "Luma",
+        href: "https://luma.com/freecodecamp.london",
+        icon: "calendar",
+    },
+    {
+        label: "Meetup",
+        href: "https://www.meetup.com/freecodecamp-london/",
+        icon: "meetup",
+    },
+    {
+        label: "GitHub",
+        href: "https://github.com/freeCodeCampLondon/fcc-website",
+        icon: "github",
+    },
+] satisfies { label: string; href: string; icon: IconName }[];
+const site = [
+    { label: "About Us", href: "/about-us/" },
+    {
+        label: "Contribute to this website",
+        href: "https://github.com/freeCodeCampLondon/fcc-website/blob/main/CONTRIBUTING.md",
+    },
+    {
+        label: "Code of conduct",
+        href: "https://www.freecodecamp.org/news/code-of-conduct/",
+    },
+    { label: "Privacy", href: "/about-us/#privacy" },
+];
+const external = (href: string) => href.startsWith("http");
+---
+
+<footer class="mt-16 border-t border-border">
+    <div class="mx-auto flex w-full max-w-5xl flex-col gap-6 px-4 py-8 text-sm sm:flex-row sm:justify-between">
+        <nav aria-label="Community">
+            <ul class="flex flex-wrap gap-x-6 gap-y-2">
+                {community.map((link) => (
+                    <li>
+                        <a
+                            class="inline-flex items-center gap-1.5 py-2"
+                            href={link.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <Icon name={link.icon} class="size-4" />
+                            {link.label}
+                            <span class="sr-only">(opens in a new tab)</span>
+                        </a>
+                    </li>
+                ))}
+            </ul>
+        </nav>
+        <nav aria-label="Site">
+            <ul class="flex flex-wrap gap-x-6 gap-y-2">
+                {site.map((link) => (
+                    <li>
+                        <a
+                            class="inline-block py-2"
+                            href={link.href}
+                            target={external(link.href) ? "_blank" : undefined}
+                            rel={
+                                external(link.href)
+                                    ? "noopener noreferrer"
+                                    : undefined
+                            }
+                        >
+                            {link.label}
+                            {external(link.href) && (
+                                <span class="sr-only">
+                                    (opens in a new tab)
+                                </span>
+                            )}
+                        </a>
+                    </li>
+                ))}
+            </ul>
+        </nav>
+    </div>
+    <p class="mx-auto w-full max-w-5xl px-4 pb-8 text-sm text-muted">
+        © {new Date().getFullYear()} freeCodeCamp London. A community group in
+        the freeCodeCamp family.
+    </p>
+    <p class="mx-auto -mt-6 w-full max-w-5xl px-4 pb-8 text-xs text-muted">
+        Proudly sponsored by
+        <a
+            class="inline-block py-1 font-bold"
+            href="https://cajogos.com/?ref=freecodecamp.london"
+            title="They pay for the domain :)"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            CAJOGOS
+            <span class="sr-only">(opens in a new tab)</span>
+        </a>
+        <span aria-hidden="true">🚀</span>
+    </p>
+</footer>

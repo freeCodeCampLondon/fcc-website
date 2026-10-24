@@ -1,0 +1,31 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { pageMeta } from "../data/pageMeta";
+---
+
+<Layout {...pageMeta["/404/"]}>
+    <div class="max-w-prose py-12">
+        <h1 class="text-4xl font-bold">Page not found</h1>
+        <p class="mt-4 text-lg text-muted">
+            Sorry, there is nothing at this address. It may have moved, or the
+            link may be mistyped.
+        </p>
+        <ul class="mt-6 flex flex-col gap-3">
+            <li>
+                <a class="inline-block py-2" href="/">
+                    Go to the home page
+                </a>
+            </li>
+            <li>
+                <a class="inline-block py-2" href="/events/">
+                    See upcoming events
+                </a>
+            </li>
+            <li>
+                <a class="inline-block py-2" href="/coding-challenges/">
+                    Try a coding challenge
+                </a>
+            </li>
+        </ul>
+    </div>
+</Layout>
