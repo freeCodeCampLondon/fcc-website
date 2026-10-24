@@ -1,0 +1,94 @@
+---
+import type { GetStaticPaths } from "astro";
+import { Image } from "astro:assets";
+import { render } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import { formatPostDate, getPublishedPosts, type Post } from "../../lib/posts";
+
+export const getStaticPaths = (async () => {
+    const posts = await getPublishedPosts();
+    return posts.map((post) => ({
+        params: { slug: post.id },
+        props: { post },
+    }));
+}) satisfies GetStaticPaths;
+
+interface Props {
+    post: Post;
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const {
+    title,
+    description,
+    author,
+    authorGithub,
+    pubDate,
+    updatedDate,
+    heroImage,
+    heroImageAlt,
+} = post.data;
+---
+
+<Layout title={title} description={description} type="article">
+    <article class="max-w-prose">
+        <p>
+            <a class="inline-block py-2" href="/blog/">
+                All posts
+            </a>
+        </p>
+        <h1 class="mt-2 text-3xl font-extrabold sm:text-4xl">{title}</h1>
+        <p class="mt-3 text-muted">
+            By{" "}
+            {authorGithub ? (
+                <a
+                    href={`https://github.com/${authorGithub}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    {author}
+                </a>
+            ) : (
+                author
+            )}{" "}
+            on{" "}
+            <time datetime={pubDate.toISOString()}>
+                {formatPostDate(pubDate)}
+            </time>
+            {updatedDate && (
+                <>
+                    {" "}
+                    (updated{" "}
+                    <time datetime={updatedDate.toISOString()}>
+                        {formatPostDate(updatedDate)}
+                    </time>
+                    )
+                </>
+            )}
+        </p>
+        {heroImage && (
+            <Image
+                class="mt-6 rounded-xl"
+                src={heroImage}
+                alt={heroImageAlt ?? ""}
+                widths={[400, 800, 1200]}
+                sizes="(min-width: 768px) 65ch, 100vw"
+            />
+        )}
+        <div class="post-content mt-6">
+            <Content />
+        </div>
+        <p class="mt-10 border-t border-border pt-6">
+            Questions or thoughts?{" "}
+            <a
+                href="https://discord.gg/hmVycPYAue"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Discuss it on Discord
+            </a>
+            .
+        </p>
+    </article>
+</Layout>

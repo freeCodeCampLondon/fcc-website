@@ -1,0 +1,3 @@
+/blog/posts/test /blog/hello-world/ 301
+/blog/posts/test/ /blog/hello-world/ 301
+/blog/posts/* /blog/:splat 301

@@ -1,10 +1,36 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import Navbar from "../../components/Navbar.astro";
-import BlogPostList from "../../components/blog/BlogPostList.astro";
+import PostList from "../../components/blog/PostList.astro";
+import { pageMeta } from "../../data/pageMeta";
+import { getPublishedPosts } from "../../lib/posts";
+
+const posts = await getPublishedPosts();
 ---
 
-<Layout title="Blog">
-    <Navbar />
-    <BlogPostList />
+<Layout {...pageMeta["/blog/"]}>
+    <div class="max-w-prose">
+        <h1 class="text-4xl font-extrabold">Blog</h1>
+        <p class="mt-4">
+            Meetup recaps, tutorials and stories from the freeCodeCamp London
+            community.
+        </p>
+        <ul class="mt-4 flex flex-wrap gap-x-6 gap-y-2">
+            <li>
+                <a
+                    class="inline-block py-2"
+                    href="https://github.com/freeCodeCampLondon/fcc-website/blob/main/CONTRIBUTING.md#writing-a-blog-post"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Write a post for us
+                </a>
+            </li>
+            <li>
+                <a class="inline-block py-2" href="/rss.xml">
+                    RSS feed
+                </a>
+            </li>
+        </ul>
+        <PostList posts={posts} />
+    </div>
 </Layout>

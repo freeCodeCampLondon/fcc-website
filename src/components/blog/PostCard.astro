@@ -1,0 +1,33 @@
+---
+// One post in the blog list. Started by deej-tsn as PostHero (PR #27).
+import Icon from "../Icon.astro";
+import { formatPostDate, postUrl, type Post } from "../../lib/posts";
+
+interface Props {
+    post: Post;
+}
+
+const { post } = Astro.props;
+const { title, description, author, pubDate, tags } = post.data;
+---
+
+<article class="rounded-xl border border-border bg-surface p-5">
+    <h2 class="text-2xl font-bold">
+        <a href={postUrl(post)}>{title}</a>
+    </h2>
+    <p class="mt-2">{description}</p>
+    <p class="mt-3 flex flex-wrap items-center gap-1.5 text-sm text-muted">
+        <Icon name="pen" class="size-4" />
+        {author} ·{" "}
+        <time datetime={pubDate.toISOString()}>{formatPostDate(pubDate)}</time>
+    </p>
+    {tags.length > 0 && (
+        <ul class="mt-3 flex flex-wrap gap-2 text-sm" aria-label="Tags">
+            {tags.map((tag) => (
+                <li class="rounded-md border border-border px-2 py-1 text-muted">
+                    {tag}
+                </li>
+            ))}
+        </ul>
+    )}
+</article>

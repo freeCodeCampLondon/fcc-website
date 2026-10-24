@@ -1,0 +1,23 @@
+---
+// The list of published posts. Started by deej-tsn as BlogPostList (PR #27).
+import PostCard from "./PostCard.astro";
+import type { Post } from "../../lib/posts";
+
+interface Props {
+    posts: Post[];
+}
+
+const { posts } = Astro.props;
+---
+
+{posts.length > 0 ? (
+    <ul class="mt-6 flex flex-col gap-6">
+        {posts.map((post) => (
+            <li>
+                <PostCard post={post} />
+            </li>
+        ))}
+    </ul>
+) : (
+    <p class="mt-6">The first posts are on their way. Check back soon.</p>
+)}
