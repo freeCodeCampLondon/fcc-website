@@ -441,6 +441,14 @@ describe.each(manualEvents)("event page $id", (event) => {
         expect(data["@context"]).toBe("https://schema.org");
         expect(data["@type"]).toBe("Event");
         expect(data.name).toBe(event.title);
+        expect(data.description).toBe(
+            doc
+                .querySelector('meta[name="description"]')
+                ?.getAttribute("content"),
+        );
+        expect(data.image).toEqual([
+            `https://freecodecamp.london/og/events/${event.id}.png`,
+        ]);
         expect(new Date(data.startDate).getTime()).toBe(
             Date.parse(event.start),
         );
@@ -452,6 +460,7 @@ describe.each(manualEvents)("event page $id", (event) => {
         expect(data.offers.price).toBe(0);
         expect(data.offers.priceCurrency).toBe("GBP");
         expect(data.organizer.name).toBe("freeCodeCamp London");
+        expect(data.performer.name).toBe("freeCodeCamp London");
     });
 });
 

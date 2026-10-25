@@ -3,6 +3,7 @@ import type { GetStaticPaths } from "astro";
 import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import JsonLd from "../../components/JsonLd.astro";
+import { eventStructuredData } from "../../lib/structuredData";
 import Icon from "../../components/Icon.astro";
 import {
     deckForEvent,
@@ -36,43 +37,7 @@ const deck = deckForEvent(Astro.params.id);
 const isAiWorkshop = Boolean(deck) || isAiWorkshopEvent(event.title);
 const end = event.end.toISOString();
 
-const EVENT_STATUS = {
-    scheduled: "https://schema.org/EventScheduled",
-    cancelled: "https://schema.org/EventCancelled",
-    postponed: "https://schema.org/EventPostponed",
-};
-
-// Google Event structured data needs a page per event and a venue address.
-const jsonLd = event.venue?.address && {
-    "@type": "Event",
-    name: event.title,
-    ...(event.summary && { description: event.summary }),
-    startDate: event.start.toISOString(),
-    endDate: end,
-    eventStatus: EVENT_STATUS[event.status],
-    eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
-    location: {
-        "@type": "Place",
-        name: event.venue.name,
-        address: {
-            "@type": "PostalAddress",
-            streetAddress: event.venue.address,
-            addressCountry: "GB",
-        },
-    },
-    offers: {
-        "@type": "Offer",
-        price: 0,
-        priceCurrency: "GBP",
-        availability: "https://schema.org/InStock",
-        url: event.url,
-    },
-    organizer: {
-        "@type": "Organization",
-        name: "freeCodeCamp London",
-        url: "https://freecodecamp.london/",
-    },
-};
+const jsonLd = eventStructuredData(Astro.params.id, event);
 ---
 
 <Layout title={event.title} description={eventDescription(event)}>

@@ -3,6 +3,7 @@ import { join } from "node:path";
 import { Window } from "happy-dom";
 import { describe, expect, it } from "vitest";
 import { pageMeta } from "../src/data/pageMeta";
+import { eventDescription, type EventData } from "../src/lib/events";
 import { THEME_COLOR } from "../src/lib/seo";
 import { eventStructuredData } from "../src/lib/structuredData";
 import {
@@ -234,39 +235,54 @@ describe("structured data", () => {
                 expect(block.name, file).toBeTruthy();
                 expect(block.startDate, file).toBeTruthy();
                 expect(location?.address?.streetAddress, file).toBeTruthy();
+                // Recommended fields Search Console reports when missing
+                expect(block.description, file).toBeTruthy();
+                expect(block.performer, file).toBeTruthy();
+                for (const image of block.image as string[]) {
+                    expect(image.startsWith(`${SITE}/`), file).toBe(true);
+                    expect(
+                        distFileFor(new URL(image).pathname),
+                        image,
+                    ).not.toBeNull();
+                }
             }
         }
     });
 
     it("builds Event data for a free, in-person meetup", () => {
-        const event = eventStructuredData({
-            name: "Coding meetup",
-            description: "Coding challenges and project showcases.",
-            startDate: "2026-11-12T18:30:00+00:00",
-            endDate: "2026-11-12T21:00:00+00:00",
-            venue: {
-                name: "Example venue",
-                streetAddress: "1 Example Street",
-                postalCode: "EC1A 1AA",
-            },
+        const id = "2026-11-12-coding-meetup";
+        const meetup: EventData = {
+            id,
+            title: "Coding meetup",
+            start: new Date("2026-11-12T18:30:00+00:00"),
+            end: new Date("2026-11-12T21:00:00+00:00"),
+            venue: { name: "Example venue", address: "1 Example Street" },
+            provider: "luma",
             url: "https://luma.com/example",
-        });
+            status: "scheduled",
+        };
+        const event = eventStructuredData(id, meetup);
         expect(event).toMatchObject({
             "@type": "Event",
+            description: eventDescription(meetup),
             eventStatus: "https://schema.org/EventScheduled",
             eventAttendanceMode:
                 "https://schema.org/OfflineEventAttendanceMode",
             location: {
                 "@type": "Place",
                 address: {
-                    addressLocality: "London",
+                    streetAddress: "1 Example Street",
                     addressCountry: "GB",
                 },
             },
+            image: [`${SITE}/og/events/${id}.png`],
             offers: { price: 0, priceCurrency: "GBP" },
             organizer: { name: "freeCodeCamp London" },
+            performer: { name: "freeCodeCamp London" },
         });
-        expect(event).not.toHaveProperty("image");
+        expect(
+            eventStructuredData(id, { ...meetup, venue: { name: "Online" } }),
+        ).toBeUndefined();
     });
 });
 
