@@ -2,7 +2,8 @@
 // Validate changes with https://search.google.com/test/rich-results and
 // https://validator.schema.org/.
 
-import { SITE_NAME, SITE_URL } from "./seo";
+import { eventDescription, type EventData } from "./events";
+import { SITE_NAME, SITE_URL, ogImagePath } from "./seo";
 
 /** The group as a schema.org Organization (home page, event organiser). */
 export const organization = {
@@ -18,54 +19,47 @@ export const organization = {
     ],
 };
 
-export interface EventDetails {
-    name: string;
-    description: string;
-    /** ISO 8601 with the UK offset, e.g. "2026-11-12T18:30:00+00:00". */
-    startDate: string;
-    endDate?: string;
-    venue: {
-        name: string;
-        streetAddress: string;
-        postalCode: string;
-        addressLocality?: string;
-    };
-    /** RSVP page (Luma). */
-    url: string;
-    /** Absolute image URL; default: none (Google then uses the page). */
-    image?: string;
-    cancelled?: boolean;
-}
+const EVENT_STATUS: Record<EventData["status"], string> = {
+    scheduled: "https://schema.org/EventScheduled",
+    cancelled: "https://schema.org/EventCancelled",
+    postponed: "https://schema.org/EventPostponed",
+};
 
 /**
  * A free, in-person meetup as a schema.org Event, with the fields Google
  * requires (name, startDate, location with address) and recommends
- * (description, endDate, eventStatus, image, offers, organizer). Google only
- * reads Event markup on a page dedicated to that one event.
+ * (description, endDate, eventStatus, image, offers, organizer, performer).
+ * Google only reads Event markup on a page dedicated to that one event, so
+ * `id` is the event page slug (/events/<id>/); its Open Graph card is the
+ * image. Returns undefined without a venue address, which Google requires.
  */
-export function eventStructuredData(event: EventDetails) {
+export function eventStructuredData(id: string, event: EventData) {
+    if (!event.venue?.address) {
+        return undefined;
+    }
+    const group = {
+        "@type": "Organization",
+        name: organization.name,
+        url: organization.url,
+    };
     return {
         "@type": "Event",
-        name: event.name,
-        description: event.description,
-        startDate: event.startDate,
-        ...(event.endDate && { endDate: event.endDate }),
-        eventStatus: event.cancelled
-            ? "https://schema.org/EventCancelled"
-            : "https://schema.org/EventScheduled",
+        name: event.title,
+        description: eventDescription(event),
+        startDate: event.start.toISOString(),
+        endDate: event.end.toISOString(),
+        eventStatus: EVENT_STATUS[event.status],
         eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
         location: {
             "@type": "Place",
             name: event.venue.name,
             address: {
                 "@type": "PostalAddress",
-                streetAddress: event.venue.streetAddress,
-                addressLocality: event.venue.addressLocality ?? "London",
-                postalCode: event.venue.postalCode,
+                streetAddress: event.venue.address,
                 addressCountry: "GB",
             },
         },
-        ...(event.image && { image: [event.image] }),
+        image: [`${SITE_URL}${ogImagePath(`/events/${id}/`)}`],
         offers: {
             "@type": "Offer",
             price: 0,
@@ -73,10 +67,8 @@ export function eventStructuredData(event: EventDetails) {
             availability: "https://schema.org/InStock",
             url: event.url,
         },
-        organizer: {
-            "@type": "Organization",
-            name: organization.name,
-            url: organization.url,
-        },
+        organizer: group,
+        // Our meetups are run by the group itself, with no headline speaker.
+        performer: group,
     };
 }
