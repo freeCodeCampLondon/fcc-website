@@ -40,7 +40,7 @@ CI (`.github/workflows/ci.yml`, Node from `.nvmrc`) runs `npm run lint`, `npm ru
 
 Vitest 5 plus happy-dom, in `tests/`:
 
-- `tests/setup/build.ts` (global setup) runs `astro build` once with `LUMA_FEED=off` (no network, events from `manual.json` only); set `SKIP_BUILD=1` to reuse `dist/`.
+- `tests/setup/build.ts` (global setup) runs `astro build` once with `LUMA_FEED=off` (no network, events from `manual.json` only); set `SKIP_BUILD=1` to reuse `dist/`. The build runs with its clock moved to just after the last `manual.json` event ends (`tests/setup/fixed-clock.mjs`), so every manual event is past and results do not depend on the time of day, even when an event is added on its own day.
 - `pages.test.ts` asserts against the built HTML in `dist/`, not Astro internals, so it should survive Astro upgrades unchanged: every `src/pages` file builds, metadata, local assets and internal links resolve, navbar, Tailwind CSS is generated, and each page renders the data from `src/data/`.
 - `interactions.test.ts` runs the inline navbar toggle, theme and event freshness scripts (with a stubbed `Date.now`) against the built markup, checks the FAQ cards and the coding challenge filters, and drives the click counter easter egg (`startClickCounter`) with `pointerdown` events in happy-dom.
 - `home.test.ts` covers the home page logic: the click counter milestones (ascending, unique, after `COUNT_REVEAL`, short, upper case, family-friendly blocklist), the easter egg wiring in the built page and the script budget (all home page scripts under 15 KB gzipped).
