@@ -13,6 +13,11 @@ Slides from our hands-on AI workshops, presented by Andy (opens in a new tab) an
 The slides are password protected. Ask for the password at one of our AI workshops or on our Discord (opens in a new tab)
 The code for each deck is public on GitHub. The slides from workshop 1 are readable there too; later decks load their content only once the password is entered.
 See upcoming events
+Workshop 9 · Wednesday 28 October 2026
+Jev Workshop: give your AI agents a fast, cheap brain for making decisions safely, locally & creatively!
+View the slides for workshop 9 (opens in a new tab)
+Event details for workshop 9
+Source on GitHub for workshop 9 (opens in a new tab)
 Workshop 8 · Wednesday 19 August 2026
 Hermes Agent w/ your Local LLM models such as Qwen, Deepseek, etc
 View the slides for workshop 8 (opens in a new tab)

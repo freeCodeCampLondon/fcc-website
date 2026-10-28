@@ -136,5 +136,19 @@
     },
     "provider": "luma",
     "url": "https://luma.com/axzt5ade"
+  },
+  {
+    "id": "2026-10-28-ai-jev-workshop-give-your-ai",
+    "sourceId": "luma:evt-ko44LNFt2Rq9E6C",
+    "title": "freeCodeCamp x Encode | AI - Jev Workshop: give your AI agents a fast, cheap brain for making decisions safely, locally & creatively!",
+    "start": "2026-10-28T18:00:00+00:00",
+    "end": "2026-10-28T21:00:00+00:00",
+    "venue": {
+      "name": "Encode Hub",
+      "address": "41 Pitfield St, London N1 6DA, UK",
+      "mapUrl": "https://www.openstreetmap.org/?mlat=51.527586&mlon=-0.083770#map=18/51.527586/-0.083770"
+    },
+    "provider": "luma",
+    "url": "https://luma.com/w6i73bgm"
   }
 ]
