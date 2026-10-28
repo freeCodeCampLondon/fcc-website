@@ -14,6 +14,8 @@ Next meetup
 Next meetup coming soon. Follow us on Luma and Discord
 Past events
 Missed an AI workshop? Catch up with the AI workshop slides
+freeCodeCamp x Encode | AI - Jev Workshop: give your AI agents a fast, cheap brain for making decisions safely, locally & creatively!
+Wednesday 28 October 2026, Encode Hub
 freeCodeCamp x Encode | AI - Workshop: Hermes Agent w/ your Local LLM models such as Qwen, Deepseek, etc
 Wednesday 19 August 2026, Encode Hub
 freeCodeCamp x Encode | AI - Workshop: Vibecoding Using Local AIs

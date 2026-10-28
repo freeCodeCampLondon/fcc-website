@@ -36,6 +36,7 @@ export const aiWorkshopDecks: AiWorkshopDeck[] = [
     deck(6, "2026-03-25-ai-workshop-breaking-down-openclaw-from"),
     deck(7, "2026-06-11-ai-workshop-vibecoding-using-local-ais"),
     deck(8, "2026-08-19-ai-workshop-hermes-agent-w-your"),
+    deck(9, "2026-10-28-ai-jev-workshop-give-your-ai"),
 ];
 
 export const deckForEvent = (eventId: string) =>
